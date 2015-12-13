@@ -1,16 +1,3 @@
-<header class="login_header">
-    <% if useraccount_signed_in? %>
-      <div class="user_nav grid-6">
-        <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete %>
-      </div>
-    <% else %>
-      <div class="grid-6">
-        <div class="grid-6-1"><%= link_to "ログイン", new_useraccount_session_path, class: 'post' %></div>
-        <div class="grid-6-1"><%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %></div>
-      </div>
-    <% end %>
-</header>
-
 <div id="login_display">
   <div id="login_form">
     <h2>ログイン</h2>

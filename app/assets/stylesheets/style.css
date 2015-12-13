@@ -1,5 +1,4 @@
 html {
-  background-color: #FF9;
   height: 100vh;
   margin: 0;
 }
@@ -12,27 +11,37 @@ body {
 }
 
 /* application.html.erb */
+#main {
+  height: 100%;
+}
 .header {
-  background-color: #9F9;
-  padding: 5px;
-  border: 1px solid #000;
   position: fixed;
   top: 0;
   width: 100%;
 }
 .user_nav, .grid-6-1 {
   display: inline;
-  padding: 5px 10px;
   border: 1px solid #000;
   border-radius: 8px;
+  float: right;
+  border: none;
+}
+.post {
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+}
+.post:hover {
+  background-color: #CFC;
+}
+.post:visited {
+  color: #FFAAAA;
 }
 #side {
-  height: 670px;
+  height: 100%;
   float: left;
-  background-color: #59F;
   border: 1px solid #000;
-  position: fixed;
-  top: 35px;
+  background-color: #CFC;
 }
 #title {
   display: inline-block;
@@ -43,15 +52,8 @@ body {
   margin: 10px;
 }
 #content {
-  display: inline-block;
-  clear: both;
-  margin: 36px 0 0 398px;
-
-  padding: 10px;
-  height: 650px;
-  width: 859px;
-  clear: both;
-  overflow:scroll;
+  height: 600px;
+  overflow: auto;
 }
 .other_user {
   font-size: 20px;
@@ -93,7 +95,8 @@ strong {
 #login_display {
   width: 100%;
   height: 100%;
-  background-image: url("image.jpeg")
+  background-image: url("image.jpeg");
+  background-size: cover;
 }
 #login_form {
   width: 200px;
@@ -108,14 +111,4 @@ strong {
 }
 #useraccount_email, #useraccount_password {
   line-height: 15px;
-}
-.login_header {
-  padding: 5px;
-  border: 1px solid #000;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.post:visited {
-  color: #FFF;
 }
