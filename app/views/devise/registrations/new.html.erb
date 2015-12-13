@@ -1,0 +1,52 @@
+<header class="login_header">
+    <% if useraccount_signed_in? %>
+      <div class="user_nav grid-6">
+        <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete %>
+      </div>
+    <% else %>
+      <div class="grid-6">
+        <div class="grid-6-1"><%= link_to "ログイン", new_useraccount_session_path, class: 'post' %></div>
+        <div class="grid-6-1"><%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %></div>
+      </div>
+    <% end %>
+</header>
+
+
+<div id="login_display">
+  <div id="login_form">
+    <h2>新規登録</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :アカウント名 %><br />
+        <%= f.text_field :accountname, autofocus: true, maxlength: "6" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :メールアドレス %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :パスワード %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %>文字以上)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :パスワード（再確認） %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

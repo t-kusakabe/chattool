@@ -1,0 +1,121 @@
+html {
+  background-color: #FF9;
+  height: 100vh;
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+}
+
+/* application.html.erb */
+.header {
+  background-color: #9F9;
+  padding: 5px;
+  border: 1px solid #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.user_nav, .grid-6-1 {
+  display: inline;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+#side {
+  height: 670px;
+  float: left;
+  background-color: #59F;
+  border: 1px solid #000;
+  position: fixed;
+  top: 35px;
+}
+#title {
+  display: inline-block;
+  font-size: 50px;
+  margin: 20px 10px;
+}
+.accountname {
+  margin: 10px;
+}
+#content {
+  display: inline-block;
+  clear: both;
+  margin: 36px 0 0 398px;
+
+  padding: 10px;
+  height: 650px;
+  width: 859px;
+  clear: both;
+  overflow:scroll;
+}
+.other_user {
+  font-size: 20px;
+  margin: 10px;
+}
+.other_user:visited {
+  color: #FFF;
+}
+
+/* index.html.erb */
+.form {
+  position: fixed;
+  bottom: 0;
+}
+.text_form {
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+/* _chat.html.erb */
+.cmt {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 5px 8px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  clear: both;
+}
+.cmt span {
+  font-weight: normal;
+}
+strong {
+  font-size: 18px;
+}
+
+/* sessions/new.html.erb */
+#login_display {
+  width: 100%;
+  height: 100%;
+  background-image: url("image.jpeg")
+}
+#login_form {
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  top: 150px;
+  border: 1px solid #000;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+}
+#useraccount_email, #useraccount_password {
+  line-height: 15px;
+}
+.login_header {
+  padding: 5px;
+  border: 1px solid #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.post:visited {
+  color: #FFF;
+}
