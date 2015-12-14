@@ -3,13 +3,14 @@ class DmsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @comments = Dm.all
+    @comments = Dm.where(opponent: params[:id]).where(contributor: current_useraccount.id)
+    
     @comment = Dm.new
     @accounts = Useraccount.all
   end
 
   def create
-    Dm.create(comment: comment_params[:comment], contributor: current_useraccount.id)
+    Dm.create(comment: comment_params[:comment], contributor: current_useraccount.id, opponent: params[:opponent])
     @comments = Dm.all
   end
 

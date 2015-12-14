@@ -67,6 +67,7 @@ body {
 .form {
   position: fixed;
   bottom: 0;
+  right: 40px;
 }
 .text_form {
     height: 30px;
