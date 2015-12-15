@@ -14,6 +14,7 @@ body {
 #main {
   height: 100%;
 }
+/* ヘッダー部 */
 .header {
   position: fixed;
   top: 0;
@@ -26,22 +27,22 @@ body {
   float: right;
   border: none;
 }
-.post {
-  text-decoration: none;
-  display: block;
-  padding: 15px 20px;
-}
-.post:hover {
-  background-color: #CFC;
-}
 .post:visited {
   color: #FFAAAA;
 }
+/* サイドメニュー */
 #side {
   height: 100%;
   float: left;
   border: 1px solid #000;
   background-color: #CFC;
+}
+#side .general a{
+  display: inline-block;
+  font-size: 25px;
+  text-decoration: none;
+  color: #FFAAAA;
+  margin: 0 0 20px 10px;
 }
 #title {
   display: inline-block;
@@ -50,20 +51,24 @@ body {
 }
 .accountname {
   margin: 10px;
+  color: #6666FF;
 }
+.other_user a {
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.other_user a:visited {
+  color: #FFAAAA;
+}
+
+/* index.html.erb */
+/* チャット部分 */
 #content {
   height: 600px;
   overflow: auto;
 }
-.other_user {
-  font-size: 20px;
-  margin: 10px;
-}
-.other_user:visited {
-  color: #FFF;
-}
-
-/* index.html.erb */
 .form {
   position: fixed;
   bottom: 0;
@@ -87,9 +92,6 @@ body {
 }
 .cmt span {
   font-weight: normal;
-}
-strong {
-  font-size: 18px;
 }
 
 /* sessions/new.html.erb */

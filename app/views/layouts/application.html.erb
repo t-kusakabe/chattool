@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <!-- ヘッダー部 -->
     <header class="header">
         <% if useraccount_signed_in? %>
           <div class="user_nav grid-6-1">
@@ -21,12 +22,16 @@
         <% end %>
     </header>
 
+    <!-- メインコンテンツ -->
     <% if useraccount_signed_in? %>
       <div id="main">
         <div id="side">
           <strong id="title">★Chat Tool!★</strong>
           <% if useraccount_signed_in? %>
+            <!-- ログインユーザー名 -->
             <h1 class="accountname"><%= current_useraccount.accountname %></h1>
+            <strong class="general"><%= link_to 'general', "/" %><strong><br>
+            <!-- 他のユーザー -->
             <% @accounts.each do |account| %>
               <% unless current_useraccount.accountname == account.accountname %>
                 <strong class="other_user"><%= link_to account.accountname, "/dms/#{account.id}" %></strong><br>
@@ -36,6 +41,8 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <!-- チャット部分 -->
         <div id="content">
           <%= yield %>
         </div>

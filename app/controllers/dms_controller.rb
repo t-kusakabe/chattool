@@ -4,7 +4,6 @@ class DmsController < ApplicationController
 
   def index
     @comments = Dm.where(opponent: params[:id]).where(contributor: current_useraccount.id)
-    
     @comment = Dm.new
     @accounts = Useraccount.all
   end
