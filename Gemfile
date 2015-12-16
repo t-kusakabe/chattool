@@ -48,3 +48,8 @@ end
 gem 'devise'
 
 gem 'pry-rails'
+
+group :production, :staging do
+  gem 'rails_12factor'
+  gem 'pg'
+end
