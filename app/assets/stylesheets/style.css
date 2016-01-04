@@ -53,6 +53,14 @@ body {
   margin: 10px;
   color: #6666FF;
 }
+.hr_style {
+  height: 2px;
+  background-color: #BBFFBB;
+  border: none;
+}
+#user_title {
+  color: #FF66FF;
+}
 .other_user a {
   display: inline-block;
   font-size: 20px;
