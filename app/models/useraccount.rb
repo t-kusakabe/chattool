@@ -5,4 +5,5 @@ class Useraccount < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :chats
+  has_many :dms
 end

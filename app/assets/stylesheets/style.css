@@ -18,24 +18,44 @@ body {
 .header {
   position: fixed;
   top: 0;
+  height: 42px;
   width: 100%;
+  border-bottom: 1px solid #888;
+  z-index: 2;
 }
-.user_nav, .grid-6-1 {
+.select {
+  line-height: 42px;
+  font-size: 25px;
+  position: fixed;
+  left: 410px;
+}
+.user_nav .post {
   display: inline;
-  border: 1px solid #000;
-  border-radius: 8px;
   float: right;
   border: none;
+  padding: 8px 13px;
+  text-decoration: none;
+  color: #0AF;
+}
+.post:hover {
+  background-color: #DDF;
 }
 .post:visited {
-  color: #FFAAAA;
+  color: #0AF;
+}
+.logout_head {
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
 }
 /* サイドメニュー */
 #side {
+  position: relative;
   height: 100%;
   float: left;
-  border: 1px solid #000;
+  border-right: 1px solid #000;
   background-color: #CFC;
+  z-index: 3;
 }
 #side .general a{
   display: inline-block;
@@ -55,7 +75,7 @@ body {
 }
 .hr_style {
   height: 2px;
-  background-color: #BBFFBB;
+  background-color: #AACCAA;
   border: none;
 }
 #user_title {
@@ -76,6 +96,8 @@ body {
 #content {
   height: 600px;
   overflow: auto;
+  padding-top: 50px;
+  z-index: 1;
 }
 .form {
   position: fixed;

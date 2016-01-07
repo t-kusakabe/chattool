@@ -6,6 +6,8 @@ class DmsController < ApplicationController
     @comments = Dm.where(opponent: params[:id]).where(contributor: current_useraccount.id)
     @comment = Dm.new
     @accounts = Useraccount.all
+    @account = Useraccount.find(params[:id])
+    # binding.pry
   end
 
   def create

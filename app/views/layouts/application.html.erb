@@ -11,13 +11,18 @@
     <!-- ヘッダー部 -->
     <header class="header">
         <% if useraccount_signed_in? %>
-          <div class="user_nav grid-6-1">
+          <div class="user_nav logout_head">
+            <% if params[:id].present? %>
+              <strong class="select"><%= @account.accountname %></strong>
+            <% else %>
+              <strong class="select">general</strong>
+            <% end %>
             <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
           </div>
         <% else %>
-          <div class="grid-6">
-            <div class="grid-6-1"><%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %></div>
-            <div class="grid-6-1"><%= link_to "ログイン", new_useraccount_session_path, class: 'post' %></div>
+          <div class="user_nav">
+            <%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %>
+            <%= link_to "ログイン", new_useraccount_session_path, class: 'post' %>
           </div>
         <% end %>
     </header>
@@ -32,10 +37,13 @@
             <h1 class="accountname"><%= current_useraccount.accountname %></h1>
             <strong class="general"><%= link_to 'general', "/" %><strong><br>
             <!-- 他のユーザー -->
-            <hr class="hr_style"><h1 id="user_title">Other User</h1>
+            <hr class="hr_style">
+            <h1 id="user_title">Other User</h1>
             <% @accounts.each do |account| %>
               <% unless current_useraccount.accountname == account.accountname %>
                 <strong class="other_user"><%= link_to account.accountname, "/dms/#{account.id}" %></strong><br>
+
+                
               <% end %>
             <% end %>
           <% end %>
@@ -49,6 +57,7 @@
         </div>
 
 
+        <!-- 1番下にスクロール -->
         <script>
           var contentHeight = document.getElementById("ul_list").scrollHeight;
           console.log($('#ul_list').height());
