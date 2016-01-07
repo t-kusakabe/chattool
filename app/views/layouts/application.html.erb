@@ -56,13 +56,13 @@
           <%= yield %>
         </div>
 
-
         <!-- 1番下にスクロール -->
         <script>
           var contentHeight = document.getElementById("ul_list").scrollHeight;
           console.log($('#ul_list').height());
           $('#content').animate({scrollTop: $('#ul_list').height()});
         </script>
+
       </div>
   <% else %>
     <%= yield %>

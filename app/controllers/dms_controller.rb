@@ -7,17 +7,16 @@ class DmsController < ApplicationController
     @comment = Dm.new
     @accounts = Useraccount.all
     @account = Useraccount.find(params[:id])
-    # binding.pry
   end
 
   def create
     Dm.create(comment: comment_params[:comment], contributor: current_useraccount.id, opponent: params[:opponent])
-    @comments = Dm.all
+    @comments = Dm.where(opponent: params[:opponent]).where(contributor: current_useraccount.id)
   end
 
   def destroy
     Dm.find(params[:id]).destroy
-    @comments = Dm.all
+    @comments = Dm.where(opponent: params[:opponent]).where(contributor: current_useraccount.id)
   end
 
   private
