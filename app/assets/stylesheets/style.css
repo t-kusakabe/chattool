@@ -145,3 +145,13 @@ body {
 #useraccount_email, #useraccount_password {
   line-height: 15px;
 }
+
+
+img.pic_shikamaro {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  top: 300px;
+  z-index: 10;
+}

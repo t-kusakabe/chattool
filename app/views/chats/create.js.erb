@@ -1,2 +1,4 @@
 $("#chat_comment").val("");
 $("ul").html("<%= j(render @comments) %>");
+var contentHeight = document.getElementById("ul_list").scrollHeight;
+$('#content').animate({scrollTop: $('#ul_list').height()});
