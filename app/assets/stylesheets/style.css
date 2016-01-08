@@ -31,9 +31,11 @@ body {
 }
 .user_nav .post {
   display: inline;
+  height: 42px;
   float: right;
   border: none;
-  padding: 8px 13px;
+  padding: 0 13px;
+  line-height: 42px;
   text-decoration: none;
   color: #0AF;
 }
