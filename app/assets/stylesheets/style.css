@@ -113,13 +113,15 @@ body {
 .form {
   position: fixed;
   bottom: 0;
-  right: 5%;
+  width: 100%;
+  /*right: 2%;*/
   background-color: rgba(255, 255, 255, 0.5);;
 }
 .text_form {
   margin-bottom: 0.5%;
-  width: 77%;
-  margin-left: 27%;
+  width: 73%;
+  position: relative;
+  left: 1%;
   font-size: 130%;
 }
 
