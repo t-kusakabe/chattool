@@ -22,12 +22,13 @@ body {
   width: 100%;
   border-bottom: 1px solid #888;
   z-index: 2;
+  background-color: rgb(255, 255, 255);
 }
 .select {
-  line-height: 42px;
-  font-size: 25px;
+  line-height: 130%;
+  font-size: 1.8em;
   position: fixed;
-  left: 410px;
+  left: 26%;
 }
 .user_nav .post {
   display: inline;
@@ -48,84 +49,112 @@ body {
 .logout_head {
   height: 100%;
   width: 100%;
-  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 /* サイドメニュー */
 #side {
   position: relative;
   height: 100%;
+  width: 25%;
   float: left;
   border-right: 1px solid #000;
   background-color: #CFC;
   z-index: 3;
 }
-#side .general a{
+.general{
   display: inline-block;
-  font-size: 25px;
+  font-size: 2em;
   text-decoration: none;
-  color: #FFAAAA;
+  border-bottom: dotted;
+  color: #f74;
   margin: 0 0 20px 10px;
+}
+.other_user {
+  display: inline-block;
+  font-size: 2em;
+  margin-left: 10px;
+  /*text-decoration: none;*/
 }
 #title {
   display: inline-block;
-  font-size: 50px;
+  font-size: 250%;
   margin: 20px 10px;
 }
 .accountname {
   margin: 10px;
-  color: #6666FF;
+  color: #22F;
 }
 .hr_style {
   height: 2px;
-  background-color: #AACCAA;
+  background-color: #ACA;
   border: none;
 }
 #user_title {
-  color: #FF66FF;
+  color: #888;
+  margin-left: 2%;
 }
-.other_user a {
-  display: inline-block;
-  font-size: 20px;
-  margin-left: 10px;
+.other_user {
+  color: #f77;
   text-decoration: none;
-}
-.other_user a:visited {
-  color: #FFAAAA;
+  border-bottom: dotted;
+  margin-bottom: 0.5em;
 }
 
 /* index.html.erb */
 /* チャット部分 */
 #content {
-  height: 600px;
+  height: 87%;
   overflow: auto;
   padding-top: 50px;
   z-index: 1;
+  background-image: url("image.jpeg");
+  background-size: cover;
 }
 .form {
   position: fixed;
   bottom: 0;
-  right: 40px;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.5);;
 }
 .text_form {
-    height: 30px;
-    font-size: 15px;
-    margin-bottom: 9px;
+  margin-bottom: 0.5%;
+  width: 77%;
+  margin-left: 27%;
+  font-size: 130%;
 }
 
 /* _chat.html.erb */
+#ul_list{
+  margin: 0;
+  padding: 0;
+  padding-left: 1%;
+}
 .cmt {
   display: inline-block;
   list-style-type: none;
-  margin: 10px 0;
-  padding: 5px 8px;
-  border: 1px solid #000;
-  border-radius: 10px;
+  width: 97%;
+  font-size: 1em;
+  /*margin: 1px;*/
+  padding: 0.6% 0.9%;
+  border-bottom: 2px solid #999;
+  background-color: rgba(255, 255, 255, 0.9);
+  /*border-radius: 8px;*/
   clear: both;
 }
 .cmt span {
   font-weight: normal;
 }
-
+.u_name {
+  color: #33c;
+  font-size: 1.5em;
+}
+.sub_time {
+  color: #999;
+  font-size: 0.8em;
+}
+.del_btn {
+  color:green;
+}
 /* sessions/new.html.erb */
 #login_display {
   width: 100%;
@@ -134,7 +163,7 @@ body {
   background-size: cover;
 }
 #login_form {
-  width: 200px;
+  width: 250px;
   margin: 0 auto;
   padding: 30px 20px;
   text-align: center;
@@ -144,10 +173,13 @@ body {
   background-color: #FDFDFD;
   border-radius: 10px;
 }
-#useraccount_email, #useraccount_password {
+#useraccount_email, #useraccount_password, #useraccount_password_confirmation {
   line-height: 15px;
+  width: 100%;
 }
-
+#sign_up_btn {
+  font-size: 1.5em;
+}
 
 img.pic_shikamaro {
   width: 100px;
