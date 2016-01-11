@@ -114,7 +114,6 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  /*right: 2%;*/
   background-color: rgba(255, 255, 255, 0.5);;
 }
 .text_form {
@@ -136,11 +135,9 @@ body {
   list-style-type: none;
   width: 97%;
   font-size: 1em;
-  /*margin: 1px;*/
   padding: 0.6% 0.9%;
   border-bottom: 2px solid #999;
   background-color: rgba(255, 255, 255, 0.9);
-  /*border-radius: 8px;*/
   clear: both;
 }
 .cmt span {
