@@ -6,7 +6,7 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :アカウント名 %><br />
+        <%= f.label :アカウント名（6文字以内） %><br />
         <%= f.text_field :accountname, autofocus: true, maxlength: "6", autocomplete: "off" %>
       </div>
 
@@ -18,7 +18,7 @@
       <div class="field">
         <%= f.label :パスワード %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %>文字以上)</em>
+        <strong>※半角英数<%= @minimum_password_length %>文字以上</strong>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
@@ -27,9 +27,9 @@
         <%= f.label :パスワード（再確認） %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
-
+      <br>
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "新規登録", id: "sign_up_btn" %>
       </div>
     <% end %>
   </div>

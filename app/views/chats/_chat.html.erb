@@ -1,6 +1,6 @@
 <li class="cmt">
-    <strong><%= chat.useraccount.accountname %></strong>
-    <%= chat.created_at %><br>
-    <span><%= chat.comment %></span>
-    <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true %>
+    <strong class="u_name"><%= chat.useraccount.accountname %></strong>
+    <span class="sub_time"><%= chat.created_at %></span><br>
+    <%= chat.comment %>
+    <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: "del_btn"%>
 </li><br>
