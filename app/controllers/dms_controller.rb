@@ -12,6 +12,7 @@ class DmsController < ApplicationController
   def create
     Dm.create(comment: comment_params[:comment], contributor: current_useraccount.id, opponent: params[:opponent])
     @comments = Dm.where(opponent: params[:opponent]).where(contributor: current_useraccount.id)
+    # binding.pry
   end
 
   def destroy
