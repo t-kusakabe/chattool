@@ -2,6 +2,7 @@ class DmsController < ApplicationController
 
   before_action :move_to_index, except: :index
 
+
   def index
     @comments = Dm.where(opponent: params[:id]).where(contributor: current_useraccount.id)
     @comment = Dm.new
@@ -17,7 +18,8 @@ class DmsController < ApplicationController
 
   def destroy
     Dm.find(params[:id]).destroy
-    @comments = Dm.where(opponent: params[:opponent]).where(contributor: current_useraccount.id)
+    @comments = Dm.where(opponent: params[:id]).where(contributor: current_useraccount.id)
+    binding.pry
   end
 
   private
