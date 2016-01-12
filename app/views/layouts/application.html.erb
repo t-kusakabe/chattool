@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chattool</title>
+  <title>★Chattool★</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,9 +13,9 @@
         <% if useraccount_signed_in? %>
           <div class="user_nav logout_head">
             <% if params[:id].present? %>
-              <strong class="select"><%= @account.accountname %></strong>
+              <strong class="select"><%= @account.accountname %>　<span style="color:gray;font-size:0.5em;">ダイレクトメッセージが送れます</span></strong>
             <% else %>
-              <strong class="select">general</strong>
+              <strong class="select">general　<span style="color:gray;font-size:0.5em;">全体に投稿できます</span></strong>
             <% end %>
             <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
           </div>
@@ -34,16 +34,15 @@
           <strong id="title">★Chat Tool!★</strong>
           <% if useraccount_signed_in? %>
             <!-- ログインユーザー名 -->
-            <h1 class="accountname"><%= current_useraccount.accountname %></h1>
-            <strong class="general"><%= link_to 'general', "/" %><strong><br>
+            <h1 class="accountname"><span style="color:#777;">You: </span><%= current_useraccount.accountname %></h1>
+            <strong><%= link_to 'general', "/", class: "general"%><strong><br>
             <!-- 他のユーザー -->
             <hr class="hr_style">
             <h1 id="user_title">Other User</h1>
             <% @accounts.each do |account| %>
               <% unless current_useraccount.accountname == account.accountname %>
-                <strong class="other_user"><%= link_to account.accountname, "/dms/#{account.id}" %></strong><br>
+                <strong><%= link_to account.accountname, "/dms/#{account.id}", class: "other_user" %></strong><br>
 
-                
               <% end %>
             <% end %>
           <% end %>

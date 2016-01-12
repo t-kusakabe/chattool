@@ -4,8 +4,7 @@
   </ul>
   <div class="form">
     <%= form_for @comment, remote: true do |f| %>
-      <%= hidden_field_tag(:opponent, params[:id]) %>
-      <%= f.text_field :comment, :size=>"100", :maxlength=>"80", :autocomplete=>"off", class: "text_form" %>
+      <%= f.text_field :comment, :size=>"100", :maxlength=>"80", autofocus: true, :autocomplete=>"off", class: "text_form" %>
     <% end %>
   </div>
 <% else %>
