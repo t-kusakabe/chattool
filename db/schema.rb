@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115043428) do
+ActiveRecord::Schema.define(version: 20160113105425) do
 
   create_table "chats", force: :cascade do |t|
     t.text     "comment",     limit: 65535
     t.string   "contributor", limit: 255
-    t.string   "opponent",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "image",       limit: 65535
   end
 
   create_table "dms", force: :cascade do |t|
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151115043428) do
     t.string   "opponent",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "image",       limit: 65535
   end
 
   create_table "useraccounts", force: :cascade do |t|

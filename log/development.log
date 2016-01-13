@@ -11009,3 +11009,82 @@ Processing by DmsController#destroy as JS
   Rendered dms/_dm.html.erb (1.5ms)
   Rendered dms/destroy.js.erb (4.4ms)
 Completed 200 OK in 22ms (Views: 7.9ms | ActiveRecord: 9.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddDetaToChats (20160113104938)
+  [1m[35m (28.5ms)[0m  ALTER TABLE `chats` ADD `image` text
+  [1m[36m (24.6ms)[0m  [1mALTER TABLE `dms` ADD `image` text[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160113104938')[0m
+  [1m[35m (11.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'chattool_development'
+  AND fk.table_name = 'chats'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `chats`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'chattool_development'
+  AND fk.table_name = 'dms'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `dms`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'chattool_development'
+  AND fk.table_name = 'useraccounts'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `useraccounts`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to RemoveTo (20160113105425)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to RemoveTo (20160113105425)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to RemoveTo (20160113105425)
+  [1m[35m (37.2ms)[0m  ALTER TABLE `chats` DROP `opponent`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160113105425')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'chattool_development'
+  AND fk.table_name = 'chats'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `chats`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'chattool_development'
+  AND fk.table_name = 'dms'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `dms`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'chattool_development'
+  AND fk.table_name = 'useraccounts'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `useraccounts`
