@@ -1,6 +1,7 @@
 <li class="cmt">
     <strong><%= dm.useraccount.accountname %></strong>
     <%= dm.created_at %><br>
+    <%= @test %>
     <span><%= dm.comment %></span>
     <%= link_to '削除', "/dms/#{dm.id}", method: :delete, remote: true %>
 </li><br>
