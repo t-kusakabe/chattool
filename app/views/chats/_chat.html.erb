@@ -2,5 +2,8 @@
     <strong class="u_name"><%= chat.useraccount.accountname %></strong>
     <span class="sub_time"><%= chat.created_at %></span><br>
     <%= chat.comment %>
-    <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: "del_btn"%>
+    <% if current_useraccount.id == chat.contributor.to_i %>
+      <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: "del_btn"%>
+    <% end %>
 </li><br>
+djflkjdlajl;kaf

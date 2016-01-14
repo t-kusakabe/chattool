@@ -8,6 +8,7 @@ class DmsController < ApplicationController
     @comment = Dm.new
     @accounts = Useraccount.all
     @account = Useraccount.find(params[:id])
+    # binding.pry
   end
 
   def create

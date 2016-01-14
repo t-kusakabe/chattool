@@ -11088,3 +11088,1422 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'useraccounts'
 [0m
   [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `useraccounts`
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:29:02 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (10.0ms)
+  Rendered dms/index.html.erb within layouts/application (21.2ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 287ms (Views: 248.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:29:03 +0900
+
+
+Started POST "/dms" for ::1 at 2016-01-14 17:29:04 +0900
+Processing by DmsController#create as JS
+  Parameters: {"utf8"=>"✓", "opponent"=>"7", "dm"=>{"comment"=>"adjflkajd"}}
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `dms` (`comment`, `contributor`, `opponent`, `created_at`, `updated_at`) VALUES ('adjflkajd', '4', '7', '2016-01-14 17:29:04', '2016-01-14 17:29:04')
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mDm Load (0.4ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (3.5ms)
+  Rendered dms/create.js.erb (7.3ms)
+Completed 200 OK in 25ms (Views: 11.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:31:30 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'
+  Rendered dms/_dm.html.erb (0.9ms)
+  Rendered dms/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms)
+
+SyntaxError (/Users/marimo/Desktop/chattool/app/views/dms/_dm.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/dms/_dm.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/dms/index.html.erb:3:in `_app_views_dms_index_html_erb___1804864479154464311_70245390545760'
+
+
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.6ms)
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:32:00 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (3.1ms)
+  Rendered dms/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:32:00 +0900
+
+
+Started POST "/dms" for ::1 at 2016-01-14 17:32:03 +0900
+Processing by DmsController#create as JS
+  Parameters: {"utf8"=>"✓", "opponent"=>"7", "dm"=>{"comment"=>"afa"}}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `dms` (`comment`, `contributor`, `opponent`, `created_at`, `updated_at`) VALUES ('afa', '4', '7', '2016-01-14 17:32:03', '2016-01-14 17:32:03')
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (3.8ms)
+  Rendered dms/create.js.erb (7.1ms)
+Completed 200 OK in 24ms (Views: 11.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:32:13 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (3.8ms)
+  Rendered dms/index.html.erb within layouts/application (5.6ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:32:13 +0900
+
+
+Started GET "/" for ::1 at 2016-01-14 17:32:15 +0900
+Processing by ChatsController#index as HTML
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered chats/_chat.html.erb (4.1ms)
+  Rendered chats/index.html.erb within layouts/application (7.1ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 64ms (Views: 46.5ms | ActiveRecord: 10.8ms)
+
+
+Started DELETE "/chats/80" for ::1 at 2016-01-14 17:32:22 +0900
+Processing by ChatsController#destroy as JS
+  Parameters: {"id"=>"80"}
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT  `chats`.* FROM `chats` WHERE `chats`.`id` = 80 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `chats` WHERE `chats`.`id` = 80
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered chats/_chat.html.erb (2.1ms)
+  Rendered chats/destroy.js.erb (5.5ms)
+Completed 200 OK in 22ms (Views: 10.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 17:33:27 +0900
+Processing by ChatsController#index as HTML
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered chats/_chat.html.erb (1.9ms)
+  Rendered chats/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:33:27 +0900
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:33:28 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (2.7ms)
+  Rendered dms/index.html.erb within layouts/application (6.2ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:33:30 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (1.5ms)
+  Rendered dms/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:33:55 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUseraccount Load (0.4ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1
+  [1m[36mDm Load (0.4ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (4.9ms)
+  Rendered dms/index.html.erb within layouts/application (7.7ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 11165ms (Views: 69.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:34:07 +0900
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:34:15 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUseraccount Load (0.4ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1
+  [1m[36mDm Load (0.4ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (3.9ms)
+  Rendered dms/index.html.erb within layouts/application (7.6ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 89ms (Views: 50.0ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:34:15 +0900
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:34:25 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (1.6ms)
+  Rendered dms/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:34:25 +0900
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:36:27 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1
+  [1m[36mDm Load (0.4ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT  `dms`.* FROM `dms` WHERE `dms`.`id` = 28 LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT  `chats`.* FROM `chats` WHERE `chats`.`id` = 28 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `chats`.* FROM `chats` WHERE `chats`.`id` = 28 LIMIT 1[0m  [["id", 28]]
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (4.6ms)
+  Rendered dms/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 190062ms (Views: 52.7ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:39:37 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUseraccount Load (0.4ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1[0m
+  [1m[35mDm Load (1.8ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (4.7ms)
+  Rendered dms/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 97ms (Views: 62.1ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:39:37 +0900
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:39:39 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (1.6ms)
+  Rendered dms/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:39:39 +0900
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:39:58 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (2.0ms)
+  Rendered dms/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:39:58 +0900
+
+
+Started GET "/" for ::1 at 2016-01-14 17:39:59 +0900
+Processing by ChatsController#index as HTML
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mChat Load (0.2ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered chats/_chat.html.erb (3.3ms)
+  Rendered chats/index.html.erb within layouts/application (5.8ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 65ms (Views: 47.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:40:04 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (4.9ms)
+  Rendered dms/index.html.erb within layouts/application (6.9ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:40:06 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (2.4ms)
+  Rendered dms/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:40:07 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUseraccount Load (0.4ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (1.6ms)
+  Rendered dms/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dms/10" for ::1 at 2016-01-14 17:40:09 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 10 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '10' AND `dms`.`contributor` = '4'
+  Rendered collection (0.0ms)
+  Rendered dms/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dms/9" for ::1 at 2016-01-14 17:40:11 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 9 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '9' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered dms/_dm.html.erb (1.5ms)
+  Rendered dms/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUseraccount Load (0.4ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:40:17 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '4'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (2.6ms)
+  Rendered dms/index.html.erb within layouts/application (4.6ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:40:19 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (3.9ms)
+  Rendered dms/index.html.erb within layouts/application (6.2ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dms/7" for ::1 at 2016-01-14 17:40:46 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '7' AND `dms`.`contributor` = '4'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered dms/_dm.html.erb (5.0ms)
+  Rendered dms/index.html.erb within layouts/application (6.9ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:40:46 +0900
+
+
+Started GET "/" for ::1 at 2016-01-14 17:40:47 +0900
+Processing by ChatsController#index as HTML
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (1.7ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+  Rendered chats/_chat.html.erb (31.3ms)
+  Rendered chats/index.html.erb within layouts/application (34.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.5ms)
+
+ActionView::Template::Error (undefined local variable or method `dm' for #<#<Class:0x007fc68ac303e0>:0x007fc69014c4c8>):
+    2:     <strong class="u_name"><%= chat.useraccount.accountname %></strong>
+    3:     <span class="sub_time"><%= chat.created_at %></span><br>
+    4:     <%= chat.comment %>
+    5:     <% if current_useraccount.id == dm.contributor.to_i %>
+    6:       <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: "del_btn"%>
+    7:     <% end %>
+    8: </li><br>
+  app/views/chats/_chat.html.erb:5:in `_app_views_chats__chat_html_erb__3028267799570007289_70245392301240'
+  app/views/chats/index.html.erb:3:in `_app_views_chats_index_html_erb___1585628297693123042_70245393034980'
+
+
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (23.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 17:40:48 +0900
+Processing by ChatsController#index as HTML
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+  Rendered chats/_chat.html.erb (19.2ms)
+  Rendered chats/index.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined local variable or method `dm' for #<#<Class:0x007fc68ac303e0>:0x007fc68bab40b0>):
+    2:     <strong class="u_name"><%= chat.useraccount.accountname %></strong>
+    3:     <span class="sub_time"><%= chat.created_at %></span><br>
+    4:     <%= chat.comment %>
+    5:     <% if current_useraccount.id == dm.contributor.to_i %>
+    6:       <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: "del_btn"%>
+    7:     <% end %>
+    8: </li><br>
+  app/views/chats/_chat.html.erb:5:in `_app_views_chats__chat_html_erb__3028267799570007289_70245361738260'
+  app/views/chats/index.html.erb:3:in `_app_views_chats_index_html_erb___1585628297693123042_70245377382700'
+
+
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.3ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.0ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/marimo/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 17:40:56 +0900
+Processing by ChatsController#index as HTML
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered chats/_chat.html.erb (2.0ms)
+  Rendered chats/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:40:56 +0900
+
+
+Started GET "/" for ::1 at 2016-01-14 17:40:58 +0900
+Processing by ChatsController#index as HTML
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mChat Load (0.2ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered chats/_chat.html.erb (2.4ms)
+  Rendered chats/index.html.erb within layouts/application (4.3ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chats" for ::1 at 2016-01-14 17:41:02 +0900
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"comment"=>"jfkl;ajdlkfja"}}
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `chats` (`comment`, `contributor`, `created_at`, `updated_at`) VALUES ('jfkl;ajdlkfja', '4', '2016-01-14 17:41:02', '2016-01-14 17:41:02')[0m
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36mChat Load (0.2ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered chats/_chat.html.erb (2.7ms)
+  Rendered chats/create.js.erb (6.4ms)
+Completed 200 OK in 24ms (Views: 11.2ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/chats" for ::1 at 2016-01-14 17:41:02 +0900
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"comment"=>"fkadjflka"}}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `chats` (`comment`, `contributor`, `created_at`, `updated_at`) VALUES ('fkadjflka', '4', '2016-01-14 17:41:02', '2016-01-14 17:41:02')[0m
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36mChat Load (0.3ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  Rendered chats/_chat.html.erb (2.6ms)
+  Rendered chats/create.js.erb (5.9ms)
+Completed 200 OK in 23ms (Views: 10.7ms | ActiveRecord: 9.7ms)
+
+
+Started DELETE "/useraccounts/sign_out" for ::1 at 2016-01-14 17:41:04 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KJswE8VqiuiAP/bxvPDFhHml8Tv+GQAFzPNh5QyC5SOEpAIRop6MbWsb4t9cFTip9wdwNg4v5qBv3/G6ui3xfA=="}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 17:41:04 +0900
+Processing by ChatsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/useraccounts/sign_in" for ::1 at 2016-01-14 17:41:04 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/useraccounts/sign_in" for ::1 at 2016-01-14 17:41:10 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LBGdzgneJryP9FxJeEaf8xlFnMgLZLrjUVIQNM4itT+RtvFqFN1Rm4UPUvq7QCqbIkMuiW1Zn0woefZNlS0FLw==", "useraccount"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`email` = 'b@gmail.com'  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `useraccounts` SET `last_sign_in_at` = '2016-01-14 15:38:47', `current_sign_in_at` = '2016-01-14 17:41:10', `sign_in_count` = 9, `updated_at` = '2016-01-14 17:41:10' WHERE `useraccounts`.`id` = 7[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 17:41:10 +0900
+Processing by ChatsController#index as HTML
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  Rendered chats/_chat.html.erb (2.3ms)
+  Rendered chats/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/chats" for ::1 at 2016-01-14 17:41:16 +0900
+Processing by ChatsController#create as JS
+  Parameters: {"utf8"=>"✓", "chat"=>{"comment"=>"l;jfakljfdlaj"}}
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `chats` (`comment`, `contributor`, `created_at`, `updated_at`) VALUES ('l;jfakljfdlaj', '7', '2016-01-14 17:41:16', '2016-01-14 17:41:16')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mChat Load (0.2ms)[0m  SELECT `chats`.* FROM `chats`
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  Rendered chats/_chat.html.erb (3.1ms)
+  Rendered chats/create.js.erb (6.2ms)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dms/4" for ::1 at 2016-01-14 17:41:35 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m
+  [1m[35mDm Load (0.3ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '4' AND `dms`.`contributor` = '7'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  Rendered dms/_dm.html.erb (16.6ms)
+  Rendered dms/index.html.erb within layouts/application (19.4ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/dms/107" for ::1 at 2016-01-14 17:41:41 +0900
+Processing by DmsController#destroy as JS
+  Parameters: {"id"=>"107"}
+  [1m[36mUseraccount Load (0.7ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mDm Load (0.8ms)[0m  SELECT  `dms`.* FROM `dms` WHERE `dms`.`id` = 107 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `dms`.* FROM `dms` WHERE `dms`.`id` = 107 LIMIT 1[0m  [["id", "107"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `dms` WHERE `dms`.`id` = 107[0m
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36mDm Load (0.4ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '4' AND `dms`.`contributor` = '7'[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  Rendered dms/_dm.html.erb (15.9ms)
+  Rendered dms/destroy.js.erb (21.0ms)
+Completed 200 OK in 44ms (Views: 26.2ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:41:47 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1[0m
+  [1m[35mDm Load (0.4ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '7'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  Rendered dms/_dm.html.erb (5.0ms)
+  Rendered dms/index.html.erb within layouts/application (7.2ms)
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:41:50 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '7'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  Rendered dms/_dm.html.erb (4.9ms)
+  Rendered dms/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dms/10" for ::1 at 2016-01-14 17:41:52 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 10 LIMIT 1[0m
+  [1m[35mDm Load (0.2ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '10' AND `dms`.`contributor` = '7'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  Rendered dms/_dm.html.erb (1.0ms)
+  Rendered dms/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT `useraccounts`.* FROM `useraccounts`
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:41:54 +0900
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1
+  [1m[36mDm Load (0.3ms)[0m  [1mSELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '7'[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  Rendered dms/_dm.html.erb (4.6ms)
+  Rendered dms/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/dms/75" for ::1 at 2016-01-14 17:41:56 +0900
+Processing by DmsController#destroy as JS
+  Parameters: {"id"=>"75"}
+  [1m[35mUseraccount Load (0.6ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mDm Load (0.2ms)[0m  [1mSELECT  `dms`.* FROM `dms` WHERE `dms`.`id` = 75 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `dms`.* FROM `dms` WHERE `dms`.`id` = 75 LIMIT 1  [["id", "75"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `dms` WHERE `dms`.`id` = 75
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mDm Load (0.6ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '7'
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  Rendered dms/_dm.html.erb (4.4ms)
+  Rendered dms/destroy.js.erb (9.5ms)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/dms/8" for ::1 at 2016-01-14 17:43:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by DmsController#index as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mUseraccount Load (0.2ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 8 LIMIT 1[0m
+  [1m[35mDm Load (0.5ms)[0m  SELECT `dms`.* FROM `dms` WHERE `dms`.`opponent` = '8' AND `dms`.`contributor` = '7'
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1  [["id", "7"]]
+  Rendered dms/_dm.html.erb (16.2ms)
+  Rendered dms/index.html.erb within layouts/application (29.0ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 276ms (Views: 239.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:43:09 +0900
+
+
+Started GET "/" for ::1 at 2016-01-14 17:43:11 +0900
+Processing by ChatsController#index as HTML
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mChat Load (1.1ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  Rendered chats/_chat.html.erb (5.2ms)
+  Rendered chats/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 64ms (Views: 44.6ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-14 17:43:18 +0900
+Processing by ChatsController#index as HTML
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mChat Load (0.2ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  Rendered chats/_chat.html.erb (3.6ms)
+  Rendered chats/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:43:18 +0900
+
+
+Started GET "/" for ::1 at 2016-01-14 17:44:01 +0900
+Processing by ChatsController#index as HTML
+  [1m[35mUseraccount Load (0.3ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7  ORDER BY `useraccounts`.`id` ASC LIMIT 1
+  [1m[36mChat Load (0.2ms)[0m  [1mSELECT `chats`.* FROM `chats`[0m
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1  [["id", "4"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 4 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mUseraccount Load (0.2ms)[0m  SELECT  `useraccounts`.* FROM `useraccounts` WHERE `useraccounts`.`id` = 7 LIMIT 1
+  Rendered chats/_chat.html.erb (2.6ms)
+  Rendered chats/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUseraccount Load (0.3ms)[0m  [1mSELECT `useraccounts`.* FROM `useraccounts`[0m
+Completed 200 OK in 76ms (Views: 74.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/chats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/style.self-d281bd0afdf20e5b9707a7f41e129c564d2c5cd790fcffc9fd73b0f7844c6de8.css?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/dm.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/useraccounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/chats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/dm.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/useraccounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-14 17:44:01 +0900
