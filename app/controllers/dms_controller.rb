@@ -4,7 +4,7 @@ class DmsController < ApplicationController
 
 
   def index
-    @comments = Dm.where(opponent: params[:id]).where(contributor: current_useraccount.id)
+    @comments = Dm.where('opponent = ? OR opponent = ?', params[:id], current_useraccount.id).where('contributor = ? OR contributor = ?', params[:id], current_useraccount.id)
     @comment = Dm.new
     @accounts = Useraccount.all
     @account = Useraccount.find(params[:id])
@@ -13,13 +13,13 @@ class DmsController < ApplicationController
 
   def create
     Dm.create(comment: comment_params[:comment], contributor: current_useraccount.id, opponent: params[:opponent])
-    @comments = Dm.where(opponent: params[:opponent]).where(contributor: current_useraccount.id)
+    @comments = Dm.where('opponent = ? OR opponent = ?', params[:opponent], current_useraccount.id).where('contributor = ? OR contributor = ?', params[:opponent], current_useraccount.id)
   end
 
   def destroy
     comment = Dm.find(params[:id])
     Dm.find(params[:id]).destroy
-    @comments = Dm.where(opponent: comment.opponent).where(contributor: current_useraccount.id)
+    @comments = Dm.where('opponent = ? OR opponent = ?', comment.opponent, current_useraccount).where('contributor = ? OR contributor = ?', comment.opponent, current_useraccount)
   end
 
   private
