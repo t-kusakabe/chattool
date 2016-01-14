@@ -3,7 +3,6 @@
     <%= dm.created_at %><br>
     <%= @test %>
     <span><%= dm.comment %></span>
-    <%= dm.contributor %>
     <% if current_useraccount.id == dm.contributor.to_i %>
       <%= link_to '削除', "/dms/#{dm.id}", method: :delete, remote: true %>
     <% end %>
