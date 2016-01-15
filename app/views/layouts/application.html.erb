@@ -10,15 +10,17 @@
 <body>
     <!-- ヘッダー部 -->
     <header class="header">
-        <% if useraccount_signed_in? %>
+        <% if useraccount_signed_in? && params[:controller] == 'chats' || params[:controller] == 'dms' %>
           <div class="user_nav logout_head">
             <% if params[:id].present? %>
-              <strong class="select"><%= @account.accountname %>　<span style="color:gray;font-size:0.5em;">ダイレクトメッセージが送れます</span></strong>
+              <strong class="select"><%= @account.accountname %>　<span class='sub_msg'>ダイレクトメッセージが送れます</span></strong>
             <% else %>
-              <strong class="select">general　<span style="color:gray;font-size:0.5em;">全体に投稿できます</span></strong>
+              <strong class="select">general　<span class="sub_msg">全体に投稿できます</span></strong>
             <% end %>
             <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
+            <%= link_to "マイページ", useraccount_path(current_useraccount), class: 'post' %>
           </div>
+        <% elsif params[:controller] == 'useraccounts' %>  
         <% else %>
           <div class="user_nav">
             <%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %>
@@ -28,7 +30,7 @@
     </header>
 
     <!-- メインコンテンツ -->
-    <% if useraccount_signed_in? %>
+    <% if useraccount_signed_in? && params[:controller] == 'chats' || params[:controller] == 'dms' %>
       <div id="main">
         <div id="side">
           <strong id="title">★Chat Tool!★</strong>
@@ -63,6 +65,8 @@
         </script>
 
       </div>
+  <% elsif params[:controller] == 'useraccounts' %>
+    <%= yield %>
   <% else %>
     <%= yield %>
   <% end %>
