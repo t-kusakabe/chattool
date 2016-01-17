@@ -20,7 +20,7 @@
             <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
             <%= link_to "マイページ", useraccount_path(current_useraccount), class: 'post' %>
           </div>
-        <% elsif params[:controller] == 'useraccounts' %>  
+        <% elsif params[:controller] == 'useraccounts' %>
         <% else %>
           <div class="user_nav">
             <%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %>
@@ -31,10 +31,12 @@
 
     <!-- メインコンテンツ -->
     <% if useraccount_signed_in? && params[:controller] == 'chats' || params[:controller] == 'dms' %>
-      <div id="main">
-        <div id="side">
-          <strong id="title">★Chat Tool!★</strong>
-          <% if useraccount_signed_in? %>
+      <div id="close_side">
+        <button class="hidden" onclick="hidden_menu();">＞</button>
+      </div>
+        <div id="open_side">
+          <strong id="title">Menu</strong><button class="hidden" onclick="open_menu();">＜</button>
+          <% if useraccount_signed_in?%>
             <!-- ログインユーザー名 -->
             <h1 class="accountname"><span style="color:#777;">You: </span><%= current_useraccount.accountname %></h1>
             <strong><%= link_to 'general', "/", class: "general"%><strong><br>
@@ -50,6 +52,7 @@
           <% end %>
         </div>
 
+        <div id="main">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
