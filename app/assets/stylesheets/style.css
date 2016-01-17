@@ -16,23 +16,19 @@ body {
 }
 /* ヘッダー部 */
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   height: 42px;
   width: 100%;
   border-bottom: 1px solid #888;
-  z-index: 2;
-  background-color: rgb(255, 255, 255);
+  /*z-index: 2;*/
+  background-color: #fff;
 }
 .select {
   line-height: 130%;
   font-size: 1.8em;
   position: fixed;
-  left: 26%;
-}
-.sub_msg{
-  color:gray;
-  font-size:0.5em;
+  left: 2%;
 }
 .user_nav .post {
   display: inline;
@@ -55,37 +51,86 @@ body {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
 }
+.sub_msg {
+    color:gray;
+    font-size:0.5em;
+}
+
 /* サイドメニュー */
-#side {
+#close_side {
   position: relative;
   height: 100%;
-  width: 25%;
+  width: 4%;
   float: left;
+  padding-left: 1%;
   border-right: 1px solid #000;
-  background-color: #CFC;
+  background-color: #68f;
   z-index: 3;
 }
+.hidden {
+  border-style: none;
+  float: right;
+  padding: 3% auto;
+  background-color: #68f;
+  color: #fff;
+  font-size: 170%;
+  font-weight: bolder;
+}
+.hidden:hover {
+  background-color: #9bf;
+}
+#open_side>.hidden {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+#close_side>.hidden {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+#open_side {
+  display: none;
+  position: relative;
+  height: 100%;
+  width: 20%;
+  float: left;
+  border-right: 1px solid #000;
+  background-color: #68f;
+  z-index: 3;
+}
+#title {
+  display: inline;
+  color: #333;
+  font-size: 200%;
+  width: 100%;
+  margin-left: 1%;
+}
+
 .general{
   display: inline-block;
   font-size: 2em;
   text-decoration: none;
-  border-bottom: dotted;
-  color: #f74;
-  margin: 0 0 20px 10px;
+  text-shadow: 1px 1px 0px #333;
+  color: #f60;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
 }
+.general:hover {
+  background-color: #22f;
+}
+
 .other_user {
   display: inline-block;
   font-size: 2em;
   margin-left: 10px;
+  /*text-decoration: none;*/
 }
-#title {
-  display: inline-block;
-  font-size: 250%;
-  margin: 20px 10px;
-}
+
 .accountname {
   margin: 10px;
-  color: #22F;
+  text-shadow: 1px 1px 0px #fff;
+  color: #00f;
 }
 .hr_style {
   height: 2px;
@@ -93,14 +138,25 @@ body {
   border: none;
 }
 #user_title {
-  color: #888;
+  text-shadow: 1px 1px 0px #fff;
+  color: #555;
   margin-left: 2%;
 }
 .other_user {
-  color: #f77;
+  display: inline-block;
+  font-size: 2em;
   text-decoration: none;
-  border-bottom: dotted;
-  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 0px #333;
+  color: #f60;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 0;
+  margin-bottom:0.5em;
+  text-align: center;
+}
+.other_user:hover {
+  background-color: #22f;
 }
 
 /* index.html.erb */
@@ -108,16 +164,16 @@ body {
 #content {
   height: 87%;
   overflow: auto;
-  padding-top: 50px;
+  padding-top: 10px;
+  margin-bottom: 10px;
   z-index: 1;
   background-image: url("image.jpeg");
   background-size: cover;
 }
 .form {
   position: fixed;
-  bottom: 0;
+  bottom: 3px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);;
 }
 .text_form {
   margin-bottom: 0.5%;

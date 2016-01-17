@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>★Chattool★</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー部 -->
+    <header class="header">
+        <% if useraccount_signed_in? %>
+          <div class="user_nav logout_head">
+            <% if params[:id].present? %>
+              <strong class="select"><%= @account.accountname %>　<span style="color:gray;font-size:0.5em;">ダイレクトメッセージが送れます</span></strong>
+            <% else %>
+              <strong class="select">general　<span style="color:gray;font-size:0.5em;">全体に投稿できます</span></strong>
+            <% end %>
+            <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
+          </div>
+        <% else %>
+          <div class="user_nav">
+            <%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %>
+            <%= link_to "ログイン", new_useraccount_session_path, class: 'post' %>
+          </div>
+        <% end %>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <% if useraccount_signed_in? %>
+      <div id="close_side">
+        <button class="hidden" onclick="hidden_menu();">＞</button>
+      </div>
+      <div id="open_side">
+        <strong id="title">Menu</strong><button class="hidden" onclick="open_menu();">＜</button>
+        <% if useraccount_signed_in? %>
+        <!-- ログインユーザー名 -->
+        <h1 class="accountname"><span style="color:#555;">You: </span><%= current_useraccount.accountname %></h1>
+        <strong><%= link_to 'general', "/", class: "general"%><strong><br>
+          <!-- 他のユーザー -->
+          <hr class="hr_style">
+          <h1 id="user_title">Other User</h1>
+          <% @accounts.each do |account| %>
+          <% unless current_useraccount.accountname == account.accountname %>
+          <strong><%= link_to account.accountname, "/dms/#{account.id}", class: "other_user" %></strong><br>
+
+          <% end %>
+          <% end %>
+          <% end %>
+        </div>
+
+      <div id="main">
+
+        <!-- チャット部分 -->
+        <div id="content">
+          <%= yield %>
+        </div>
+
+        <!-- 1番下にスクロール -->
+        <script>
+          var contentHeight = document.getElementById("ul_list").scrollHeight;
+          $('#content').animate({scrollTop: $('#ul_list').height()});
+        </script>
+
+      </div>
+  <% else %>
+    <%= yield %>
+  <% end %>
+</body>
+</html>

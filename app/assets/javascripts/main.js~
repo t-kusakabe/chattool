@@ -1,0 +1,9 @@
+function hidden_menu() {
+  $("#close_side").fadeOut();
+  $("#open_side").slideDown();
+}
+
+function open_menu() {
+  $("#open_side").fadeOut();
+  $("#close_side").slideDown("slow");
+}
