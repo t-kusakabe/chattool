@@ -188,6 +188,7 @@ DEPENDENCIES
   jquery-rails
   mysql2 (= 0.3.18)
   paperclip
+  pg
   pry-rails
   rails (= 4.2.4)
   rails_12factor
