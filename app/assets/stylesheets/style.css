@@ -64,20 +64,20 @@ body {
   float: left;
   padding-left: 1%;
   border-right: 1px solid #000;
-  background-color: #68f;
+  background-color: #99c;
   z-index: 3;
 }
 .hidden {
   border-style: none;
   float: right;
   padding: 3% auto;
-  background-color: #68f;
+  background-color: #99c;
   color: #fff;
   font-size: 170%;
   font-weight: bolder;
 }
 .hidden:hover {
-  background-color: #9bf;
+  background-color: #aac;
 }
 #open_side>.hidden {
   padding-top: 2%;
@@ -94,7 +94,7 @@ body {
   width: 20%;
   float: left;
   border-right: 1px solid #000;
-  background-color: #68f;
+  background-color: #99c;
   z-index: 3;
 }
 #title {
@@ -106,7 +106,7 @@ body {
 }
 
 .general{
-  display: inline-block;
+  display: block;
   font-size: 2em;
   text-decoration: none;
   text-shadow: 1px 1px 0px #333;
@@ -117,7 +117,13 @@ body {
   text-align: center;
 }
 .general:hover {
-  background-color: #22f;
+  display: block;
+  background-color: #446;
+  padding: 0 auto;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  border-radius: 20px;
 }
 
 .other_user {
@@ -130,7 +136,7 @@ body {
 .accountname {
   margin: 10px;
   text-shadow: 1px 1px 0px #fff;
-  color: #00f;
+  color: #444s;
 }
 .hr_style {
   height: 2px;
@@ -143,7 +149,7 @@ body {
   margin-left: 2%;
 }
 .other_user {
-  display: inline-block;
+  display: block;
   font-size: 2em;
   text-decoration: none;
   text-shadow: 1px 1px 0px #333;
@@ -152,11 +158,20 @@ body {
   padding-top: 2%;
   padding-bottom: 2%;
   margin: 0;
-  margin-bottom:0.5em;
+  /*margin-bottom:0.5em;*/
   text-align: center;
 }
 .other_user:hover {
-  background-color: #22f;
+  display: block;
+  background-color: #446;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  border-radius: 20px;
+}
+#user_list {
+  overflow: auto;
+  height: 60%;
 }
 
 /* index.html.erb */
