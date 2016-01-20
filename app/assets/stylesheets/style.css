@@ -136,7 +136,7 @@ body {
 .accountname {
   margin: 10px;
   text-shadow: 1px 1px 0px #fff;
-  color: #444s;
+  color: #444;
 }
 .hr_style {
   height: 2px;
@@ -261,4 +261,83 @@ img.pic_shikamaro {
   right: 0;
   top: 300px;
   z-index: 10;
+}
+
+/*useraccounts/show.html.erb*/
+#mypage {
+  width: 70%;
+  height: 86%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 0 5%;
+  background-image: url("image.jpg");
+  background-size: cover;
+}
+#opa_layer {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 0 5%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 10%;
+  top: 2%;
+}
+#user_image {
+  height: 96px;
+  width: 96px;
+  float: left;
+  background-size: cover;
+  background-image: url("icon.jpg");
+  border: 4px solid #f99;
+  border-radius: 30px;
+}
+h1.mypage_title {
+  margin-top: 5%;
+  font-size: 250%;
+  color: #fff;
+  text-shadow: 3px 4px #000;
+}
+h2.mypage_title {
+  font-size: 200%;
+  margin-top: 0;
+  width: 50%;
+  text-align: center;
+  color: #555;
+}
+#acount_user {
+  color: #000;
+  text-shadow: 3px 3px #fff;
+}
+#user_info {
+  margin: 0;
+  margin-left: 5%;
+}
+.cng_col {
+  font-size: 110%;
+  border-style: none;
+}
+form.cng_col {
+  text-align: right;
+}
+select.cng_col {
+  background-color: #ff8;
+  color: #000;
+}
+#sel_col {
+  width: 3em;
+  border: 2px solid #888;
+  border-radius: 5px;
+}
+button.cng_col {
+  border: 2px solid #888;
+  border-radius: 5px;
+  background-color: #ff8;
+  color: #000;
+}
+button.cng_col:hover {
+  border: 2px solid #888;
+  border-radius: 5px;
+  background-color: #fc0;
 }
