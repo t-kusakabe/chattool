@@ -3,9 +3,12 @@ class ChatsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
+    return redirect_to '/1' if params[:id].nil?
     @comments = Chat.all
     @comment = Chat.new
     @accounts = Useraccount.all
+    @groups = Group.all
+    @group = Group.find(params[:id])
   end
 
   def create
@@ -24,6 +27,6 @@ class ChatsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless useraccount_signed_in?
+    redirect_to action: 'index' unless useraccount_signed_in?
   end
 end

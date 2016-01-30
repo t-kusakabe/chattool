@@ -52,8 +52,20 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .sub_msg {
-    color:gray;
+    color: #888;
     font-size:0.5em;
+}
+
+.user_nav .group_post {
+  display: inline;
+  height: 42px;
+  color: #888;
+  padding: 0 13px;
+  line-height: 42px;
+  text-decoration: none;
+}
+.user_nav .group_back {
+  color: #3A3;
 }
 
 /* サイドメニュー */
@@ -105,39 +117,44 @@ body {
   margin-left: 1%;
 }
 
-.general{
-  display: block;
-  font-size: 2em;
+.add_group {
+  color: #AF8;
+  font-size: 30px;
+  text-shadow: 3px 3px 5px #000;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.add_group:hover {
+  padding: 10px;
+}
+
+.group {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 20px;
   text-decoration: none;
   text-shadow: 1px 1px 0px #333;
   color: #f60;
-  width: 100%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  text-align: center;
 }
-.general:hover {
-  display: block;
+.group:hover {
+  display: inline-block;
+  padding: 0 10px;
   background-color: #446;
-  padding: 0 auto;
-  margin: 0 auto;
-  text-align: center;
-  width: 50%;
   border-radius: 20px;
 }
 
-.other_user {
-  display: inline-block;
-  font-size: 2em;
-  margin-left: 10px;
-  /*text-decoration: none;*/
+.group_list {
+  height: 150px;
+  overflow: scroll;
+  margin-left: 50px;
 }
-
 .accountname {
   margin: 10px;
   text-shadow: 1px 1px 0px #fff;
-  color: #444s;
+  color: #444;
 }
+
 .hr_style {
   height: 2px;
   background-color: #ACA;
@@ -146,32 +163,28 @@ body {
 #user_title {
   text-shadow: 1px 1px 0px #fff;
   color: #555;
-  margin-left: 2%;
+  margin: 0 2%;
 }
+
+.user_list {
+  height: 150px;
+  overflow: scroll;
+  margin-left: 50px;
+}
+
 .other_user {
-  display: block;
-  font-size: 2em;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 20px;
   text-decoration: none;
   text-shadow: 1px 1px 0px #333;
   color: #f60;
-  width: 100%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin: 0;
-  /*margin-bottom:0.5em;*/
-  text-align: center;
 }
 .other_user:hover {
-  display: block;
+  display: inline-block;
+  padding: 0 10px;
   background-color: #446;
-  margin: 0 auto;
-  text-align: center;
-  width: 50%;
   border-radius: 20px;
-}
-#user_list {
-  overflow: auto;
-  height: 60%;
 }
 
 /* index.html.erb */
