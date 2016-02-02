@@ -2,13 +2,12 @@ class DmsController < ApplicationController
 
   before_action :move_to_index, except: :index
 
-
   def index
     @comments = Dm.where('opponent = ? OR opponent = ?', params[:id], current_useraccount.id).where('contributor = ? OR contributor = ?', params[:id], current_useraccount.id)
     @comment = Dm.new
     @accounts = Useraccount.all
     @account = Useraccount.find(params[:id])
-    # binding.pry
+    @groups = Group.all    
   end
 
   def create
