@@ -43,7 +43,7 @@
           <strong id="title">Menu</strong><button class="hidden" onclick="hidden_menu();">＜</button>
           <% if useraccount_signed_in?%>
             <!-- ログインユーザー名 -->
-            <h1 class="accountname"><span style="color:#777;">You: </span><%= current_useraccount.accountname %></h1>
+            <h1 class="account_name"><span style="color:#777;">You: </span><%= current_useraccount.accountname %></h1>
 
             <!-- グループ -->
             <strong><%= link_to 'add group', new_group_path, class: 'add_group' %></strong>

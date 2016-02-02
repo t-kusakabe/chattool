@@ -4,7 +4,7 @@ class ChatsController < ApplicationController
 
   def index
     return redirect_to '/1' if params[:id].nil?
-    @comments = Chat.all
+    @comments = Chat.all.where(opponent: params[:id])
     @comment = Chat.new
     @accounts = Useraccount.all
     @groups = Group.all
@@ -12,13 +12,14 @@ class ChatsController < ApplicationController
   end
 
   def create
-    Chat.create(comment: comment_params[:comment], contributor: current_useraccount.id)
-    @comments = Chat.all
+    Chat.create(comment: comment_params[:comment], contributor: current_useraccount.id, opponent: params[:opponent])
+    @comments = Chat.all.where(opponent: params[:opponent])
   end
 
   def destroy
+    post = Chat.find(params[:id])
     Chat.find(params[:id]).destroy
-    @comments = Chat.all
+    @comments = Chat.all.where(opponent: post.opponent)
   end
 
   private
