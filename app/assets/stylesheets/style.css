@@ -55,6 +55,11 @@ body {
     color: #888;
     font-size:0.5em;
 }
+.sub_msg_g {
+  color: #888;
+  font-size: 1em;
+  font-weight: bolder;
+}
 
 .user_nav .group_post {
   display: inline;
@@ -65,7 +70,13 @@ body {
   text-decoration: none;
 }
 .user_nav .group_back {
-  color: #3A3;
+  color: #0af;
+  font-size: 1.3em;
+}
+.group_back:hover {
+  background-color: #ddf;
+  padding-top: 13px;
+  padding-bottom: 10px;
 }
 
 /* サイドメニュー */
@@ -140,6 +151,7 @@ body {
 
 .group {
   display: inline-block;
+  margin-bottom: 5px;
   padding: 0 10px;
   font-size: 20px;
   text-decoration: none;
@@ -149,14 +161,38 @@ body {
 .group:hover {
   display: inline-block;
   padding: 0 10px;
-  background-color: #446;
-  border-radius: 20px;
+  background-color: #668;
+  border-radius: 5px;
 }
 
 .group_list {
   height: 150px;
-  overflow: scroll;
+  overflow: auto;
   margin-left: 50px;
+  margin-top: 5%;
+}
+.create_group_form {
+  width: 50%;
+  height: 30%;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  text-align: center;
+}
+#group_name_lab {
+  color: #44f;
+  font-size: 170%;
+}
+#group_group_name {
+  font-size: 150%;
+  color: #000;
+  width: 10em;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border: solid #009 2px;
+  margin-top: 3em;
 }
 
 .hr_style {
@@ -164,6 +200,7 @@ body {
   background-color: #ACA;
   border: none;
 }
+
 #user_title {
   text-shadow: 1px 1px 0px #fff;
   color: #555;
@@ -171,13 +208,15 @@ body {
 }
 
 .user_list {
-  height: 150px;
-  overflow: scroll;
+  height: 40%;
+  overflow: auto;
   margin-left: 50px;
+  margin-top: 5px;
 }
 
 .other_user {
   display: inline-block;
+  margin-bottom: 5px;
   padding: 0 10px;
   font-size: 20px;
   text-decoration: none;
@@ -187,8 +226,8 @@ body {
 .other_user:hover {
   display: inline-block;
   padding: 0 10px;
-  background-color: #446;
-  border-radius: 20px;
+  background-color: #668;
+  border-radius: 5px;
 }
 
 /* index.html.erb */
@@ -299,7 +338,7 @@ img.pic_shikamaro {
   background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   left: 10%;
-  top: 2%;
+  top: 3%;
 }
 #user_image {
   height: 96px;
@@ -343,18 +382,19 @@ select.cng_col {
   color: #000;
 }
 #sel_col {
-  width: 3em;
-  border: 2px solid #888;
+  width: 8em;
+  border: 1px solid #888;
   border-radius: 5px;
+  text-align: center;
 }
 button.cng_col {
-  border: 2px solid #888;
+  border: 1px solid #888;
   border-radius: 5px;
   background-color: #ff8;
   color: #000;
 }
 button.cng_col:hover {
-  border: 2px solid #888;
+  border: 1px solid #888;
   border-radius: 5px;
   background-color: #fc0;
 }
