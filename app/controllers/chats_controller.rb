@@ -8,7 +8,7 @@ class ChatsController < ApplicationController
     @comment = Chat.new
     @accounts = Useraccount.all
     @groups = Group.all
-    @group = Group.find(params[:id])
+    @group = Group.find(params[:id]) if Group.all.present?
   end
 
   def create

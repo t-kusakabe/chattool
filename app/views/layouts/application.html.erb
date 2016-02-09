@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>★Chattool★</title>
+  <title>ぶんつーる♡</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -14,7 +14,7 @@
           <div class="user_nav logout_head">
             <% if params[:controller] == 'dms' %>
               <strong class="select"><%= @account.accountname %>　<span class='sub_msg'>ダイレクトメッセージが送れます</span></strong>
-            <% elsif params[:controller] == 'chats' %>
+            <% elsif params[:controller] == 'chats' && @group.present? %>
               <strong class="select"><%= @group.group_name %>　<span class="sub_msg">全体に投稿できます</span></strong>
             <% end %>
             <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
