@@ -13,7 +13,8 @@ class ChatsController < ApplicationController
   end
 
   def create
-    Chat.create(comment: comment_params[:comment], contributor: current_useraccount.id, opponent: params[:opponent])
+    Chat.create(comment_params)
+    # binding.pry
     @comments = Chat.all.where(opponent: params[:opponent])
   end
 
@@ -25,12 +26,12 @@ class ChatsController < ApplicationController
 
   private
   def comment_params
-    params.require(:chat).permit(:comment)
+    params.require(:chat).permit(:comment).merge(contributor: current_useraccount.id, opponent: params[:opponent])
   end
 
   def move_to_index
     redirect_to action: 'index' unless useraccount_signed_in?
   end
 
-  
+
 end
