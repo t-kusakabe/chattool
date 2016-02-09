@@ -3,12 +3,13 @@ class ChatsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    return redirect_to '/1' if params[:id].nil?
+    # binding.pry
+    return redirect_to "/#{params[:id]}" if params[:id].present?
     @comments = Chat.all.where(opponent: params[:id])
     @comment = Chat.new
     @accounts = Useraccount.all
     @groups = Group.all
-    @group = Group.find(params[:id]) if Group.all.present?
+    @group = Group.find(params[:id]) if params[:id].present?
   end
 
   def create
@@ -30,4 +31,6 @@ class ChatsController < ApplicationController
   def move_to_index
     redirect_to action: 'index' unless useraccount_signed_in?
   end
+
+  
 end
