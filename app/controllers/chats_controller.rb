@@ -4,12 +4,16 @@ class ChatsController < ApplicationController
 
   def index
     # binding.pry
-    return redirect_to "/#{params[:id]}" if params[:id].present?
+    return redirect_to '/1' unless params[:id].present?
     @comments = Chat.all.where(opponent: params[:id])
     @comment = Chat.new
     @accounts = Useraccount.all
     @groups = Group.all
-    @group = Group.find(params[:id]) if params[:id].present?
+    if params[:id].present?
+      Group.create(id: 1, group_name: 'general', description: '全体に共有')
+    else
+      @group = Group.find(params[:id])
+    end
   end
 
   def create
