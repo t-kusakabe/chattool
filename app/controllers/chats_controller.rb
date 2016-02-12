@@ -2,14 +2,15 @@ class ChatsController < ApplicationController
 
   before_action :move_to_index, except: :index
 
+
   def index
     # binding.pry
-    return redirect_to '/1' unless params[:id].present?
+    return redirect_to '/1' if params[:id].blank?
     @comments = Chat.all.where(opponent: params[:id])
     @comment = Chat.new
     @accounts = Useraccount.all
     @groups = Group.all
-    if params[:id].present?
+    if @groups.empty?
       Group.create(id: 1, group_name: 'general', description: '全体に共有')
     else
       @group = Group.find(params[:id])
