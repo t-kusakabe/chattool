@@ -14,6 +14,11 @@ class GroupsController < ApplicationController
     return redirect_to controller: 'chats', action: 'index'
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+  end
+
 private
   def group_params
     params.require(:group).permit(:group_name)

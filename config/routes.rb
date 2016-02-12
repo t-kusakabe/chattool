@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'dms/:id' => 'dms#index'
   resources :chats, only: [:create, :destroy]
   resources :dms, only: [:create, :destroy]
-  resources :groups, only: [:new, :create]
+  resources :groups, only: [:new, :create, :destroy]
 end

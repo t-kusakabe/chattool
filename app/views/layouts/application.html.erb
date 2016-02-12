@@ -15,7 +15,7 @@
             <% if params[:controller] == 'dms' %>
               <strong class="select"><%= @account.accountname %>　<span class='sub_msg'>ダイレクトメッセージが送れます</span></strong>
             <% elsif params[:controller] == 'chats' && @group.present? %>
-              <strong class="select"><%= @group.group_name %>　<span class="sub_msg">全体に投稿できます</span></strong>
+              <strong class="select"><%= @group.group_name %> <span class="sub_msg"><%= link_to 'グループの削除', group_path, method: :delete, remote: true %>全体に投稿できます</span></strong>
             <% end %>
             <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
             <%= link_to "マイページ", useraccount_path(current_useraccount), class: 'post' %>
