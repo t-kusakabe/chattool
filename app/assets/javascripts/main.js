@@ -8,6 +8,20 @@ function hidden_menu() {
   $("#close_side").fadeIn("slow");
 }
 
+var check = 0;
+function group_fnc(){
+  if(check == 0){
+    $('#list_group_add_delete').fadeIn(150);
+    check++;
+  }
+  else{
+    $('#list_group_add_delete').hide();
+    check--;
+  }
+}
+
+
+
 // function transition() { //これ。これがサイドバー表示する関数
 //   if ($("#open_side").css("display") == "none"){
 //     $("#close_side").hide();

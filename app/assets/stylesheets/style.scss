@@ -21,14 +21,13 @@ body {
   height: 42px;
   width: 100%;
   border-bottom: 1px solid #888;
-  /*z-index: 2;*/
+  z-index: 2;
   background-color: #fff;
 }
 .select {
   line-height: 130%;
   font-size: 1.8em;
-  position: fixed;
-  left: 2%;
+  margin: 2%;
 }
 .user_nav .post {
   display: inline;
@@ -52,8 +51,32 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .sub_msg {
-    color: #888;
-    font-size:0.5em;
+  color: #888;
+  font-size:0.5em;
+
+  #group_btn {
+    border: none;
+    background-color: #FFF;
+    font-size: 15px;
+    color: #AAA;
+  }
+}
+
+#list_group_add_delete {
+  display: none;
+  background-color: #FFF;
+  width: 30%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-left: 100px;
+  padding: 0 10px;
+  list-style: none;
+  position: absolute;
+  z-index: 5;
+  width: 112px;
+    a {
+      text-decoration: none;
+    }
 }
 
 .user_nav .group_post {
@@ -107,7 +130,6 @@ body {
   float: left;
   border-right: 1px solid #000;
   background-color: #99C;
-  z-index: 3;
 }
 #title {
   display: inline;
@@ -124,18 +146,6 @@ body {
 
 .account_name span {
   color: #777;
-}
-
-.add_group {
-  color: #AF8;
-  font-size: 30px;
-  text-shadow: 3px 3px 5px #000;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-.add_group:hover {
-  padding: 10px;
 }
 
 .group {
@@ -277,7 +287,6 @@ img.pic_shikamaro {
   position: absolute;
   right: 0;
   top: 300px;
-  z-index: 10;
 }
 
 /*useraccounts/show.html.erb*/

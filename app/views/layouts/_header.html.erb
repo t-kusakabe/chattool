@@ -1,0 +1,42 @@
+<!-- ヘッダー部 -->
+<header class="header">
+  <% if useraccount_signed_in? && params[:id] || params[:controller] == 'dms' %>
+    <div class="user_nav logout_head">
+      <% if params[:controller] == 'dms' %>
+        <strong class="select"><%= @account.accountname %>　<span class='sub_msg'>ダイレクトメッセージが送れます</span></strong>
+      <% elsif params[:controller] == 'chats' && @group.present? %>
+        <strong class="select">
+          <%= @group.group_name %> 
+            <span class="sub_msg">
+              <button id='group_btn' onClick='group_fnc();'>&#9660</button>
+              全体に投稿できます
+            </span>
+        </strong>
+      <% end %>
+      <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
+      <%= link_to "マイページ", useraccount_path(current_useraccount), class: 'post' %>
+      <% if params[:controller] == 'useraccounts' %>
+        <div class='user_nav'><%= link_to '<=戻る', '/', class: 'group_post group_back' %></div>
+      <% end %>
+    </div>
+
+  <% elsif params[:controller] == 'groups' %>
+    <div class='user_nav'>
+      <%= link_to '<=戻る', '/', class: 'group_post group_back' %>
+      <span class='group_post'>グループが作れます</span>
+    </div>
+
+  <% else %>
+    <div class="user_nav">
+      <%= link_to "新規登録", new_useraccount_registration_path, class: 'post' %>
+      <%= link_to "ログイン", new_useraccount_session_path, class: 'post' %>
+    </div>
+  <% end %>
+</header>
+
+<ul id='list_group_add_delete'>
+  <li><%= link_to 'add group', new_group_path %>
+  <% if params[:controller] == 'chats' %>
+    <li><%= link_to 'グループの削除', group_path, method: :delete, remote: true unless params[:id] == '1' %>
+  <% end %>
+</ul>
