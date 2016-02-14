@@ -1,5 +1,6 @@
 <div class='create_group_form'>
   <%= form_for @group do |f| %>
-    <%= f.text_field :group_name %>
+    <%= f.text_field :group_name %><br>
+    <%= f.text_area :description, size: '18x2' %>
   <% end %>
 </div>

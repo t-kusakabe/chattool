@@ -21,13 +21,12 @@ function group_fnc(){
 }
 
 
+$('#ul_list').ready(function(){
+  var contentHeight = document.getElementById("ul_list").scrollHeight;
+  $('#content').animate({scrollTop: $('#ul_list').height()});
+});
 
-// function transition() { //これ。これがサイドバー表示する関数
-//   if ($("#open_side").css("display") == "none"){
-//     $("#close_side").hide();
-//     $("#open_side").fadeIn();
-//   }
-// })
+
 
 function cng_col() {
   var sel_col = document.getElementById('sel_col').value;
