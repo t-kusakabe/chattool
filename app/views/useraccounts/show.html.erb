@@ -3,8 +3,13 @@
     <h1 class="mypage_title">MyPage</h1><br>
     <div id="user_info">
       <!-- アカウントのアイコン -->
-      <div id="user_image"></div>
-      <h2 class="mypage_title">ユーザの名前：<span id="acount_user"><%= @account.accountname %></span></h2>
+      <%= image_tag 'icon.jpg', size: '100x100', id: 'user_image' %>
+      <h2 class="mypage_title">
+        <div class='user_name'>
+          ユーザの名前：
+          <br><span id="account_user"><%= @account.accountname %></span>
+        </div>
+      </h2>
     </div>
     <form class="cng_col" onsubmit="cng_col();">
       <select class="cng_col" name="sel_col" id="sel_col">
