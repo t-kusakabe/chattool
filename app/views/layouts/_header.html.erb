@@ -6,7 +6,7 @@
         <strong class="select"><%= @account.accountname %>　<span class='sub_msg'>ダイレクトメッセージが送れます</span></strong>
       <% elsif params[:controller] == 'chats' && @group.present? %>
         <strong class="select">
-          <%= @group.group_name %> 
+          <%= @group.group_name %>
             <span class="sub_msg">
               <button id='group_btn' onClick='group_fnc();'>&#9660</button>
               <%= @group.description %>
@@ -16,13 +16,13 @@
       <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
       <%= link_to "マイページ", useraccount_path(current_useraccount), class: 'post' %>
       <% if params[:controller] == 'useraccounts' %>
-        <div class='user_nav'><%= link_to '<=戻る', '/', class: 'group_post group_back' %></div>
+        <div class='user_nav'><%= link_to '＜ 戻る', '/', class: 'group_post group_back' %></div>
       <% end %>
     </div>
 
   <% elsif params[:controller] == 'groups' %>
     <div class='user_nav'>
-      <%= link_to '<=戻る', '/', class: 'group_post group_back' %>
+      <%= link_to '＜ 戻る', '/', class: 'group_post group_back' %>
       <span class='group_post'>グループが作れます</span>
     </div>
 

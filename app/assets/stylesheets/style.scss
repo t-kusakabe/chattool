@@ -1,7 +1,7 @@
 html {
   height: 100vh;
   margin: 0;
-  
+
   body {
     width: 100%;
     height: 100%;
@@ -70,17 +70,19 @@ html {
 #list_group_add_delete {
   display: none;
   background-color: #FFF;
-  width: 30%;
-  border: 1px solid #000;
-  border-radius: 10px;
+  font-size: 120%;
+  font-weight: bolder;
+  border: 2px solid #000;
+  border-radius: 5px;
   margin-left: 100px;
-  padding: 0 10px;
+  padding: 10px 10px;
   list-style: none;
   position: absolute;
   z-index: 5;
-  width: 112px;
+  width: 10em;
     a {
       text-decoration: none;
+      color: #f60;
     }
 }
 
@@ -95,7 +97,14 @@ html {
   }
   .group_back {
     color: #3A3;
+    font-size: 170%;
+    &:hover {
+      background-color: #DDF;
+      height: 42px;
+      padding: 8px 13px;
+    }
   }
+
 }
 
 /* サイドメニュー */
@@ -177,15 +186,6 @@ html {
   margin-left: 50px;
   margin-top: 5%;
 }
-.create_group_form {
-  width: 50%;
-  height: 30%;
-  margin: 0 auto;
-  margin-top: 10%;
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 5px;
-  text-align: center;
-}
 #group_name_lab {
   color: #44f;
   font-size: 170%;
@@ -239,9 +239,8 @@ html {
 /* index.html.erb */
 /* チャット部分 */
 #content {
-  height: 87%;
+  height: 100%;
   overflow: auto;
-  padding-top: 10px;
   margin-bottom: 10px;
   z-index: 1;
   background-image: url("image.jpeg");
@@ -294,7 +293,6 @@ html {
 #login_display {
   width: 100%;
   height: 100%;
-  background-image: url("image.jpeg");
   background-size: cover;
   #login_form {
     width: 250px;
@@ -326,13 +324,11 @@ img.pic_shikamaro {
 
 /*useraccounts/show.html.erb*/
 #mypage {
-  width: 100%;
+  width: 70%;
   height: 86%;
   margin: 0 auto;
   margin-top: 2%;
   padding: 0 5%;
-  background-image: url("image.jpg");
-  background-size: cover;
 }
 #opa_layer {
   width: 70%;
@@ -363,15 +359,13 @@ h1.mypage_title {
   color: #fff;
   text-shadow: 3px 4px #000;
 }
-h2.mypage_title {
-  display: inline;
-  font-size: 200%;
-  margin: 0;
-  width: 100%;
-  color: #555;
-}
 .user_name {
-  display: inline;
+  margin-left: 5%;
+  width: 70%;
+  float:left;
+  font-size: 200%;
+  font-weight: bolder;
+  color: #888;
 }
 #account_user {
   color: #000;
@@ -389,7 +383,7 @@ select.cng_col {
   color: #000;
 }
 #sel_col {
-  width: 8em;
+  width: 10em;
   border: 1px solid #888;
   border-radius: 5px;
   text-align: center;
@@ -406,15 +400,18 @@ button.cng_col {
   }
 }
 
-/* groups/new.html.erb */ 
+/* groups/new.html.erb */
 .create_group_form {
-  width: 100%;
+  width: 70%;
   position: absolute;
   top: 50%;
   margin-top: -10%;
   #new_group {
-    margin-left: 10%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
     h1 {
+      display: inline;
       margin: 0;
       text-shadow: 2px 2px 0 #FFF;
     }
@@ -431,4 +428,3 @@ button.cng_col {
     }
   }
 }
-

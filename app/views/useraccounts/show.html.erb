@@ -4,12 +4,10 @@
     <div id="user_info">
       <!-- アカウントのアイコン -->
       <%= image_tag 'icon.jpg', size: '100x100', id: 'user_image' %>
-      <h2 class="mypage_title">
         <div class='user_name'>
           ユーザの名前：
           <br><span id="account_user"><%= @account.accountname %></span>
         </div>
-      </h2>
     </div>
     <form class="cng_col" onsubmit="cng_col();">
       <select class="cng_col" name="sel_col" id="sel_col">
