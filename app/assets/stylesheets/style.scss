@@ -1,13 +1,14 @@
 html {
   height: 100vh;
   margin: 0;
-}
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  position: fixed;
-  top: 0;
+  
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+  }
 }
 
 /* application.html.erb */
@@ -21,14 +22,13 @@ body {
   height: 42px;
   width: 100%;
   border-bottom: 1px solid #888;
-  /*z-index: 2;*/
+  z-index: 2;
   background-color: #fff;
 }
 .select {
   line-height: 130%;
   font-size: 1.8em;
-  position: fixed;
-  left: 2%;
+  margin: 2%;
 }
 .user_nav .post {
   display: inline;
@@ -39,33 +39,57 @@ body {
   line-height: 42px;
   text-decoration: none;
   color: #0AF;
+
+  &:hover { background-color: #DDF; }
+  &:visited { color: #0AF; }
 }
-.post:hover {
-  background-color: #DDF;
-}
-.post:visited {
-  color: #0AF;
-}
+
 .logout_head {
   height: 100%;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
 }
 .sub_msg {
-    color: #888;
-    font-size:0.5em;
+  color: #888;
+  font-size:0.5em;
+
+  #group_btn {
+    border: none;
+    background-color: #FFF;
+    font-size: 15px;
+    color: #AAA;
+  }
 }
 
-.user_nav .group_post {
-  display: inline;
-  height: 42px;
-  color: #888;
-  padding: 0 13px;
-  line-height: 42px;
-  text-decoration: none;
+#list_group_add_delete {
+  display: none;
+  background-color: #FFF;
+  width: 30%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-left: 100px;
+  padding: 0 10px;
+  list-style: none;
+  position: absolute;
+  z-index: 5;
+  width: 112px;
+    a {
+      text-decoration: none;
+    }
 }
-.user_nav .group_back {
-  color: #3A3;
+
+.user_nav {
+   .group_post {
+    display: inline;
+    height: 42px;
+    color: #888;
+    padding: 0 13px;
+    line-height: 42px;
+    text-decoration: none;
+  }
+  .group_back {
+    color: #3A3;
+  }
 }
 
 /* サイドメニュー */
@@ -87,9 +111,9 @@ body {
   color: #fff;
   font-size: 170%;
   font-weight: bolder;
-}
-.hidden:hover {
-  background-color: #aac;
+  &:hover {
+    background-color: #aac;
+  }
 }
 #open_side>.hidden {
   padding-top: 2%;
@@ -107,7 +131,6 @@ body {
   float: left;
   border-right: 1px solid #000;
   background-color: #99C;
-  z-index: 3;
 }
 #title {
   display: inline;
@@ -120,23 +143,11 @@ body {
 .account_name {
   margin: 10px;
   text-shadow: 1px 1px 0px #FFF;
+  span {
+    color: #777;
+  }
 }
 
-.account_name span {
-  color: #777;
-}
-
-.add_group {
-  color: #AF8;
-  font-size: 30px;
-  text-shadow: 3px 3px 5px #000;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-.add_group:hover {
-  padding: 10px;
-}
 
 .group {
   display: inline-block;
@@ -145,12 +156,12 @@ body {
   text-decoration: none;
   text-shadow: 1px 1px 0px #333;
   color: #f60;
-}
-.group:hover {
-  display: inline-block;
-  padding: 0 10px;
-  background-color: #446;
-  border-radius: 20px;
+  &:hover {
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #446;
+    border-radius: 20px;
+  }
 }
 
 .group_list {
@@ -183,12 +194,12 @@ body {
   text-decoration: none;
   text-shadow: 1px 1px 0px #333;
   color: #f60;
-}
-.other_user:hover {
-  display: inline-block;
-  padding: 0 10px;
-  background-color: #446;
-  border-radius: 20px;
+  &:hover {
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #446;
+    border-radius: 20px;
+  }
 }
 
 /* index.html.erb */
@@ -230,9 +241,9 @@ body {
   border-bottom: 2px solid #999;
   background-color: rgba(255, 255, 255, 0.9);
   clear: both;
-}
-.cmt span {
-  font-weight: normal;
+  span {
+    font-weight: normal;
+  }
 }
 .u_name {
   color: #33c;
@@ -277,7 +288,6 @@ img.pic_shikamaro {
   position: absolute;
   right: 0;
   top: 300px;
-  z-index: 10;
 }
 
 /*useraccounts/show.html.erb*/
@@ -352,9 +362,36 @@ button.cng_col {
   border-radius: 5px;
   background-color: #ff8;
   color: #000;
+  &:hover {
+    border: 2px solid #888;
+    border-radius: 5px;
+    background-color: #fc0;
+  }
 }
-button.cng_col:hover {
-  border: 2px solid #888;
-  border-radius: 5px;
-  background-color: #fc0;
+
+/* groups/new.html.erb */ 
+.create_group_form {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -10%;
+  #new_group {
+    margin-left: 10%;
+    h1 {
+      margin: 0;
+      text-shadow: 2px 2px 0 #FFF;
+    }
+    #group_group_name, #group_description {
+      font-size: 1em;
+      width: 400px;
+      height: 2em;
+      margin-left: 5%;
+      border: 3px solid #44F;
+      border-radius: 20px;
+    }
+    #group_group_name {
+      margin-bottom: 10px;
+    }
+  }
 }
+

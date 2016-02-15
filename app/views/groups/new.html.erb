@@ -1,5 +1,8 @@
 <div class='create_group_form'>
   <%= form_for @group do |f| %>
-    <%= f.text_field :group_name %>
+    <h1>Group Name</h1>
+    <%= f.text_field :group_name, autofocus: true %><br>
+    <h1>Topic</h1>
+    <%= f.text_area :description %>
   <% end %>
 </div>
