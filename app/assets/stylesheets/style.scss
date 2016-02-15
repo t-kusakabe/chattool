@@ -22,13 +22,14 @@ html {
   height: 42px;
   width: 100%;
   border-bottom: 1px solid #888;
-  z-index: 2;
+  /*z-index: 2;*/
   background-color: #fff;
 }
 .select {
   line-height: 130%;
   font-size: 1.8em;
-  margin: 2%;
+  position: fixed;
+  left: 2%;
 }
 .user_nav .post {
   display: inline;
@@ -59,6 +60,11 @@ html {
     font-size: 15px;
     color: #AAA;
   }
+}
+.sub_msg_g {
+  color: #888;
+  font-size: 1em;
+  font-weight: bolder;
 }
 
 #list_group_add_delete {
@@ -151,6 +157,7 @@ html {
 
 .group {
   display: inline-block;
+  margin-bottom: 5px;
   padding: 0 10px;
   font-size: 20px;
   text-decoration: none;
@@ -166,8 +173,32 @@ html {
 
 .group_list {
   height: 150px;
-  overflow: scroll;
+  overflow: auto;
   margin-left: 50px;
+  margin-top: 5%;
+}
+.create_group_form {
+  width: 50%;
+  height: 30%;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  text-align: center;
+}
+#group_name_lab {
+  color: #44f;
+  font-size: 170%;
+}
+#group_group_name {
+  font-size: 150%;
+  color: #000;
+  width: 10em;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border: solid #009 2px;
+  margin-top: 3em;
 }
 
 .hr_style {
@@ -175,6 +206,7 @@ html {
   background-color: #ACA;
   border: none;
 }
+
 #user_title {
   text-shadow: 1px 1px 0px #fff;
   color: #555;
@@ -182,13 +214,15 @@ html {
 }
 
 .user_list {
-  height: 150px;
-  overflow: scroll;
+  height: 40%;
+  overflow: auto;
   margin-left: 50px;
+  margin-top: 5px;
 }
 
 .other_user {
   display: inline-block;
+  margin-bottom: 5px;
   padding: 0 10px;
   font-size: 20px;
   text-decoration: none;
@@ -309,7 +343,7 @@ img.pic_shikamaro {
   background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   left: 10%;
-  top: 2%;
+  top: 3%;
 }
 #user_image {
   height: 96px;
@@ -353,12 +387,13 @@ select.cng_col {
   color: #000;
 }
 #sel_col {
-  width: 3em;
-  border: 2px solid #888;
+  width: 8em;
+  border: 1px solid #888;
   border-radius: 5px;
+  text-align: center;
 }
 button.cng_col {
-  border: 2px solid #888;
+  border: 1px solid #888;
   border-radius: 5px;
   background-color: #ff8;
   color: #000;
