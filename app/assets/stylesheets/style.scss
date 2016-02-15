@@ -368,3 +368,30 @@ button.cng_col {
     background-color: #fc0;
   }
 }
+
+/* groups/new.html.erb */ 
+.create_group_form {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -10%;
+  #new_group {
+    margin-left: 10%;
+    h1 {
+      margin: 0;
+      text-shadow: 2px 2px 0 #FFF;
+    }
+    #group_group_name, #group_description {
+      font-size: 1em;
+      width: 400px;
+      height: 2em;
+      margin-left: 5%;
+      border: 3px solid #44F;
+      border-radius: 20px;
+    }
+    #group_group_name {
+      margin-bottom: 10px;
+    }
+  }
+}
+
