@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129034540) do
+ActiveRecord::Schema.define(version: 20160215132415) do
 
   create_table "chats", force: :cascade do |t|
     t.text     "comment",     limit: 65535
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160129034540) do
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
     t.string   "accountname",            limit: 255
+    t.string   "color",                  limit: 255
   end
 
   add_index "useraccounts", ["email"], name: "index_useraccounts_on_email", unique: true, using: :btree

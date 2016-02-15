@@ -262,17 +262,17 @@ html {
   height: 100%;
   background-image: url("image.jpeg");
   background-size: cover;
-}
-#login_form {
-  width: 250px;
-  margin: 0 auto;
-  padding: 30px 20px;
-  text-align: center;
-  position: relative;
-  top: 150px;
-  border: 1px solid #000;
-  background-color: #FDFDFD;
-  border-radius: 10px;
+  #login_form {
+    width: 250px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    border: 1px solid #000;
+    background-color: #FDFDFD;
+    border-radius: 10px;
+  }
 }
 #useraccount_email, #useraccount_password, #useraccount_password_confirmation {
   line-height: 15px;
