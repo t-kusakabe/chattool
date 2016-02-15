@@ -4,7 +4,7 @@
     <div id="user_info">
       <!-- アカウントのアイコン -->
       <div id="user_image"></div>
-      <h2 class="mypage_title">ユーザの名前：<span id="acount_user">憂鬱</span></h2>
+      <h2 class="mypage_title">ユーザの名前：<span id="acount_user"><%= @account.accountname %></span></h2>
     </div>
     <form class="cng_col" onsubmit="cng_col();">
       <select class="cng_col" name="sel_col" id="sel_col">
