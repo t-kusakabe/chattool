@@ -6,12 +6,12 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :アカウント名（6文字以内） %><br />
-        <%= f.text_field :accountname, autofocus: true, maxlength: "6", autocomplete: "off" %>
+        <%= f.label :アカウント名（6文字以内） %><br>
+        <%= f.text_field :accountname, autofocus: true, maxlength: "15", autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :メールアドレス %><br />
+        <%= f.label :メールアドレス %><br>
         <%= f.email_field :email, autocomplete: "off" %>
       </div>
 
@@ -24,10 +24,16 @@
       </div>
 
       <div class="field">
-        <%= f.label :パスワード（再確認） %><br />
+        <%= f.label :パスワード（再確認） %><br>
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
+
+      <div class='field'>
+        <%= f.label :カラー %><br>
+        <%= f.select :color, { 選択してください: 'NULL', 赤: 'red', 黄: 'yellow', 橙: 'orange', 空: 'skyblue', 青: 'blue', 緑: 'green', 桃: 'pink', 黒: 'black', 銀: 'silver', 金: 'gold'} %>
+      </div>
       <br>
+
       <div class="actions">
         <%= f.submit "新規登録", id: "sign_up_btn" %>
       </div>
