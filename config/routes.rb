@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :useraccounts
-  resources :useraccounts, only: [:show, :edit]
+  resources :useraccounts, only: [:show, :edit, :update]
   root 'chats#index'
   get '/:id' => 'chats#index'
   get 'dms/:id' => 'dms#index'
