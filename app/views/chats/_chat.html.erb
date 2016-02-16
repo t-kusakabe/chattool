@@ -1,11 +1,11 @@
-<li class="cmt">
+<li class='cmt'>
   <%= image_tag chat.useraccount.avatar, size: '50x50', class: 'user_iamge', style: 'float: left' %>
   <span class='inner_comment'>
-    <strong class="u_name"><%= chat.useraccount.accountname %></strong>
-    <span class="sub_time"><%= chat.created_at %></span><br>
+    <strong class='u_name'><%= chat.useraccount.accountname %></strong>
+    <span class='sub_time'><%= chat.created_at %></span><br>
     <span class='comment'><%= chat.comment %></span>
     <% if current_useraccount.id == chat.contributor.to_i %>
-      <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: "del_btn"%>
+      <%= link_to '削除', "/chats/#{chat.id}", method: :delete, remote: true, class: 'del_btn' %>
     <% end %>
   </span>
 </li><br>
