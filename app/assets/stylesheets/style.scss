@@ -100,6 +100,7 @@ html {
 
 /* サイドメニュー */
 #close_side {
+  display: none;
   position: relative;
   height: 100%;
   width: 4%;
@@ -130,7 +131,6 @@ html {
   padding-bottom: 20%;
 }
 #open_side {
-  display: none;
   position: relative;
   height: 100%;
   width: 20%;
@@ -149,12 +149,7 @@ html {
 .account_name {
   margin: 10px;
   text-shadow: 1px 1px 0px #FFF;
-  span {
-    color: #777;
-  }
 }
-
-
 .group {
   display: inline-block;
   margin-bottom: 5px;
@@ -275,17 +270,20 @@ html {
   border-bottom: 2px solid #999;
   background-color: rgba(255, 255, 255, 0.9);
   clear: both;
-  span {
-    font-weight: normal;
+  .inner_comment {
+    margin-left: 10px;
+    .u_name {
+      color: #33c;
+      font-size: 1.5em;
+    }
+    .sub_time {
+      color: #999;
+      font-size: 0.8em;
+    }
+    .comment {
+      margin-left: 10px;
+    }
   }
-}
-.u_name {
-  color: #33c;
-  font-size: 1.5em;
-}
-.sub_time {
-  color: #999;
-  font-size: 0.8em;
 }
 .del_btn {
   color:green;
@@ -348,13 +346,13 @@ img.pic_shikamaro {
 #user_info {
   width: 100%;
 }
-#user_image {
+.user_image {
   display: inline;
-  height: 96px;
-  width: 96px;
+  height: 90px;
+  width: 90px;
   float: left;
   background-size: cover;
-  border: 4px solid #f99;
+  border: 4px solid #000;
   border-radius: 30px;
 }
 h1.mypage_title {

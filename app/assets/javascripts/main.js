@@ -30,5 +30,5 @@ $('#ul_list').ready(function(){
 
 function cng_col() {
   var sel_col = document.getElementById('sel_col').value;
-  $("#user_image").css("border-color", sel_col);
+  $(".user_image").css("border-color", sel_col);
 }
