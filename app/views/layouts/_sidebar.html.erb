@@ -5,12 +5,19 @@
         <strong id="title">Menu</strong><button class="hidden" onclick="hidden_menu();">＜</button>
         <% if useraccount_signed_in?%>
           <!-- ログインユーザー名 -->
-          <h1 class="account_name"><span style="color:#777;">You: </span><%= current_useraccount.accountname %></h1>
+          <h1 class="account_name">
+            <%= image_tag current_useraccount.avatar, class: 'user_image' %>
+            <%= javascript_tag do %>
+              var sel_col = <%= raw current_useraccount.color.to_json %>;
+              $(".user_image").css("border-color", sel_col);
+            <% end %>
+            <span class='useraccount_name'><%= current_useraccount.accountname %></span>
+          </h1><br><br>
 
           <!-- グループ -->
           <div class='group_list'>
             <% @groups.each do |group| %>
-            <strong><%= link_to group.group_name, "/#{group.id}", class: "group"%></strong><br>
+              <strong><%= link_to group.group_name, "/#{group.id}", class: "group"%></strong><br>
             <% end %>
           </div>
 

@@ -3,11 +3,7 @@
     <h1 class="mypage_title">MyPage</h1><br>
     <div id="user_info">
       <!-- アカウントのアイコン -->
-      <%= image_tag current_useraccount.avatar, size: '100x100', class: 'user_image' %>
-      <%= javascript_tag do %>
-        var sel_col = <%= raw current_useraccount.color.to_json %>;
-        $(".user_image").css("border-color", sel_col);
-      <% end %>
+      <%= image_tag 'icon.jpg', size: '100x100', id: 'user_image' %>
       <h2 class="mypage_title">
         <div class='user_name'>
           ユーザの名前：
@@ -16,5 +12,4 @@
       </h2>
     </div>
   </div>
-  <%= link_to '編集', edit_useraccount_path %>
 </div>
