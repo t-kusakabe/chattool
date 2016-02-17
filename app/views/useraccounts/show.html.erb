@@ -8,13 +8,12 @@
         var sel_col = <%= raw current_useraccount.color.to_json %>;
         $(".user_image").css("border-color", sel_col);
       <% end %>
-      <h2 class="mypage_title">
-        <div class='user_name'>
-          ユーザの名前：
-          <br><span id="account_user"><%= @account.accountname %></span>
-        </div>
-      </h2>
+      <div class='user_name'>
+          ユーザの名前：<br>
+          <span id="account_user"><%= @account.accountname %></span>
+      </div>
+      <br><br><br>
+      <%= link_to '編集', edit_useraccount_path, class: 'to_edit_page' %>
     </div>
   </div>
-  <%= link_to '編集', edit_useraccount_path %>
 </div>
