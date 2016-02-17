@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* line 1, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+html {
+  height: 100vh;
+  margin: 0;
+}
+/* line 5, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+html body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+}
+
+/* application.html.erb */
+/* line 15, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#main {
+  height: 100%;
+}
+
+/* ヘッダー部 */
+/* line 19, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.header {
+  position: relative;
+  top: 0;
+  height: 42px;
+  width: 100%;
+  border-bottom: 1px solid #888;
+  /*z-index: 2;*/
+  background-color: #fff;
+}
+
+/* line 28, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.select {
+  line-height: 130%;
+  font-size: 1.8em;
+  position: fixed;
+  left: 2%;
+}
+
+/* line 34, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_nav .post {
+  display: inline;
+  height: 42px;
+  float: right;
+  border: none;
+  padding: 0 13px;
+  line-height: 42px;
+  text-decoration: none;
+  color: #0AF;
+}
+/* line 44, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_nav .post:hover {
+  background-color: #DDF;
+}
+/* line 45, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_nav .post:visited {
+  color: #0AF;
+}
+
+/* line 48, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.logout_head {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* line 53, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.sub_msg {
+  color: #888;
+  font-size: 0.5em;
+}
+/* line 57, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.sub_msg #group_btn {
+  border: none;
+  background-color: #FFF;
+  font-size: 15px;
+  color: #AAA;
+}
+
+/* line 64, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.sub_msg_g {
+  color: #888;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+/* line 70, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#list_group_add_delete {
+  display: none;
+  background-color: #FFF;
+  width: 30%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-left: 100px;
+  padding: 0 10px;
+  list-style: none;
+  position: absolute;
+  z-index: 5;
+  width: 112px;
+}
+/* line 82, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#list_group_add_delete a {
+  text-decoration: none;
+}
+
+/* line 88, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_nav .group_post {
+  display: inline;
+  height: 42px;
+  color: #888;
+  padding: 0 13px;
+  line-height: 42px;
+  text-decoration: none;
+}
+/* line 96, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_nav .group_back {
+  color: #3A3;
+}
+
+/* サイドメニュー */
+/* line 102, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#close_side {
+  display: none;
+  position: relative;
+  height: 100%;
+  width: 4%;
+  float: left;
+  padding-left: 1%;
+  border-right: 1px solid #000;
+  background-color: #99c;
+  z-index: 3;
+}
+
+/* line 113, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.hidden {
+  border-style: none;
+  float: right;
+  padding: 3% auto;
+  background-color: #99c;
+  color: #fff;
+  font-size: 170%;
+  font-weight: bolder;
+}
+/* line 121, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.hidden:hover {
+  background-color: #aac;
+}
+
+/* line 125, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#open_side > .hidden {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* line 129, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#close_side > .hidden {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+/* line 133, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#open_side {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  float: left;
+  border-right: 1px solid #000;
+  background-color: #99C;
+}
+
+/* line 141, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#title {
+  display: inline;
+  color: #333;
+  font-size: 200%;
+  width: 100%;
+  margin-left: 1%;
+}
+
+/* line 149, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.account_name {
+  margin: 10px;
+  text-shadow: 1px 1px 0px #FFF;
+}
+
+/* line 153, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.group {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #333;
+  color: #f60;
+}
+/* line 161, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.group:hover {
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #446;
+  border-radius: 20px;
+}
+
+/* line 169, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.group_list {
+  height: 150px;
+  overflow: auto;
+  margin-left: 50px;
+  margin-top: 5%;
+}
+
+/* line 175, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.create_group_form {
+  width: 50%;
+  height: 30%;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* line 184, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#group_name_lab {
+  color: #44f;
+  font-size: 170%;
+}
+
+/* line 188, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#group_group_name {
+  font-size: 150%;
+  color: #000;
+  width: 10em;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border: solid #009 2px;
+  margin-top: 3em;
+}
+
+/* line 199, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.hr_style {
+  height: 2px;
+  background-color: #ACA;
+  border: none;
+}
+
+/* line 205, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#user_title {
+  text-shadow: 1px 1px 0px #fff;
+  color: #555;
+  margin: 0 2%;
+}
+
+/* line 211, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_list {
+  height: 40%;
+  overflow: auto;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+/* line 218, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.other_user {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #333;
+  color: #f60;
+}
+/* line 226, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.other_user:hover {
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #446;
+  border-radius: 20px;
+}
+
+/* index.html.erb */
+/* チャット部分 */
+/* line 236, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#content {
+  height: 87%;
+  overflow: auto;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  z-index: 1;
+  background-image: url("image.jpeg");
+  background-size: cover;
+}
+
+/* line 245, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.form {
+  position: fixed;
+  bottom: 3px;
+  width: 100%;
+}
+
+/* line 250, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.text_form {
+  margin-bottom: 0.5%;
+  width: 73%;
+  position: relative;
+  left: 1%;
+  font-size: 130%;
+}
+
+/* _chat.html.erb */
+/* line 259, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#ul_list {
+  margin: 0;
+  padding: 0;
+  padding-left: 1%;
+}
+
+/* line 264, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.cmt {
+  display: inline-block;
+  list-style-type: none;
+  width: 97%;
+  font-size: 1em;
+  padding: 0.6% 0.9%;
+  border-bottom: 2px solid #999;
+  background-color: rgba(255, 255, 255, 0.9);
+  clear: both;
+}
+/* line 273, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.cmt .inner_comment {
+  margin-left: 10px;
+}
+/* line 275, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.cmt .inner_comment .u_name {
+  color: #33c;
+  font-size: 1.5em;
+}
+/* line 279, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.cmt .inner_comment .sub_time {
+  color: #999;
+  font-size: 0.8em;
+}
+/* line 283, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.cmt .inner_comment .comment {
+  margin-left: 10px;
+}
+
+/* line 288, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.del_btn {
+  color: green;
+}
+
+/* sessions/new.html.erb */
+/* line 292, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#login_display {
+  width: 100%;
+  height: 100%;
+  background-image: url("image.jpeg");
+  background-size: cover;
+}
+/* line 297, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#login_display #login_form {
+  width: 250px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  border: 1px solid #000;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+}
+
+/* line 309, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#useraccount_email, #useraccount_password, #useraccount_password_confirmation {
+  line-height: 15px;
+  width: 100%;
+}
+
+/* line 313, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#sign_up_btn {
+  font-size: 1.5em;
+}
+
+/* line 317, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+img.pic_shikamaro {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  top: 300px;
+}
+
+/*useraccounts/show.html.erb*/
+/* line 326, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#mypage {
+  width: 100%;
+  height: 86%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 0 5%;
+  background-image: url("image.jpg");
+  background-size: cover;
+}
+
+/* line 335, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#opa_layer {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 0 5%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 10%;
+  top: 3%;
+}
+
+/* line 346, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#user_info {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 350, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_image {
+  display: inline;
+  height: 90px;
+  width: 90px;
+  float: left;
+  background-size: cover;
+  border: 4px solid #000;
+  border-radius: 30px;
+}
+
+/* line 359, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+h1.mypage_title {
+  margin-top: 5%;
+  font-size: 250%;
+  color: #fff;
+  text-shadow: 3px 4px #000;
+}
+
+/* line 365, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+h2.mypage_title {
+  display: inline;
+  font-size: 200%;
+  margin: 0;
+  width: 100%;
+  color: #555;
+}
+
+/* line 372, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.user_name {
+  display: inline;
+}
+
+/* line 375, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#account_user {
+  color: #000;
+  text-shadow: 3px 3px #fff;
+}
+
+/* line 379, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#user_edit {
+  font-size: 1em;
+  width: 400px;
+  height: 2em;
+  margin-left: 5%;
+  border: 3px solid #44F;
+  border-radius: 20px;
+}
+
+/* line 387, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.cng_col {
+  font-size: 110%;
+  border-style: none;
+}
+
+/* line 391, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+form.cng_col {
+  text-align: right;
+}
+
+/* line 394, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+select.cng_col {
+  background-color: #ff8;
+  color: #000;
+}
+
+/* line 398, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+#sel_col {
+  width: 8em;
+  border: 1px solid #888;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* line 404, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+button.cng_col {
+  border: 1px solid #888;
+  border-radius: 5px;
+  background-color: #ff8;
+  color: #000;
+}
+/* line 409, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+button.cng_col:hover {
+  border: 2px solid #888;
+  border-radius: 5px;
+  background-color: #fc0;
+}
+
+/* groups/new.html.erb */
+/* line 417, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.create_group_form {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -10%;
+}
+/* line 422, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.create_group_form #new_group {
+  margin-left: 10%;
+}
+/* line 424, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.create_group_form #new_group h1 {
+  margin: 0;
+  text-shadow: 2px 2px 0 #FFF;
+}
+/* line 428, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.create_group_form #new_group #group_group_name, .create_group_form #new_group #group_description {
+  font-size: 1em;
+  width: 400px;
+  height: 2em;
+  margin-left: 5%;
+  border: 3px solid #44F;
+  border-radius: 20px;
+}
+/* line 436, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.create_group_form #new_group #group_group_name {
+  margin-bottom: 10px;
+}
+
+/* update.hmlt.erb */
+/* line 443, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.edit_text {
+  font-size: 60px;
+  width: 50%;
+  margin-left: 50px;
+  position: absolute;
+  top: 30%;
+}
+
+/* line 450, /Users/marimo/Desktop/chattool/app/assets/stylesheets/style.scss */
+.back_show {
+  color: #F44;
+  font-size: 30px;
+  float: right;
+  text-decoration: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

@@ -21,6 +21,8 @@ class ChatsController < ApplicationController
     Chat.create(comment_params)
     # binding.pry
     @comments = Chat.all.where(opponent: params[:opponent])
+
+  
   end
 
   def destroy
