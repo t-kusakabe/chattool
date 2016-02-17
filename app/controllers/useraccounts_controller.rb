@@ -15,6 +15,6 @@ class UseraccountsController < ApplicationController
 
   private
   def update_params
-    params.require(:useraccount).permit(:accountname)
+    params.require(:useraccount).permit(:accountname, :avatar)
   end
 end
