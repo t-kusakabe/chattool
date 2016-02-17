@@ -1,9 +1,11 @@
-<li class="cmt">
-    <strong><%= dm.useraccount.accountname %></strong>
-    <%= dm.created_at %><br>
-    <%= @test %>
-    <span><%= dm.comment %></span>
+<li class='cmt'>
+  <%= image_tag dm.useraccount.avatar, size: '50x50', class: 'user_iamge', style: 'float: left' %>
+  <span class='inner_comment'>
+    <strong class='u_name'><%= dm.useraccount.accountname %></strong>
+    <span class='sub_time'><%= dm.created_at %></span><br>
+    <span class='comment'><%= dm.comment %></span>
     <% if current_useraccount.id == dm.contributor.to_i %>
-      <%= link_to '削除', "/dms/#{dm.id}", method: :delete, remote: true %>
+      <%= link_to '削除', "/dms/#{dm.id}", method: :delete, remote: true, class: 'del_btn' %>
     <% end %>
+  </span>
 </li><br>

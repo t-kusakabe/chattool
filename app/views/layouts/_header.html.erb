@@ -16,14 +16,14 @@
       <%= link_to "ログアウト", destroy_useraccount_session_path, method: :delete, class: 'post' %>
       <%= link_to "マイページ", useraccount_path(current_useraccount), class: 'post' %>
       <% if params[:controller] == 'useraccounts' %>
-        <div class='user_nav'><%= link_to '＜ 戻る', '/', class: 'group_post group_back' %></div>
+        <div class='user_nav'><%= link_to '<戻る', '/', class: 'group_post group_back' %></div>
       <% end %>
     </div>
 
   <% elsif params[:controller] == 'groups' %>
     <div class='user_nav'>
-      <%= link_to '＜ 戻る', '/', class: 'group_post group_back' %>
-      <span class='group_post'>グループが作れます</span>
+      <%= link_to '<戻る', '/', class: 'group_post group_back' %>
+      <span class='group_post sub_msg_g'>グループが作れます</span>
     </div>
 
   <% else %>

@@ -6,4 +6,7 @@ class Useraccount < ActiveRecord::Base
 
   has_many :chats
   has_many :dms
+
+  has_attached_file :avatar, styles: {medium: '300x300#', thumb: '100x100#'}
+  validates_attachment_content_type :avatar, content_type: ['image/jpg', 'image/jpeg', 'image/png']
 end

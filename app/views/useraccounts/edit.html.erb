@@ -1,0 +1,22 @@
+<div id="mypage">
+  <div id="opa_layer">
+    <h1 class="mypage_title">MyPage</h1><br>
+    <div id="user_info">
+      <!-- アカウントのアイコン -->
+      <%= form_for @account, method: :patch do |f| %>
+        <%= image_tag current_useraccount.avatar, size: '100x100', class: 'user_image' %>
+        <%= javascript_tag do %>
+          var sel_col = <%= raw current_useraccount.color.to_json %>;
+          $(".user_image").css("border-color", sel_col);
+        <% end %>
+        <div class="user_name">
+            ユーザの名前：<br>
+          <%= f.text_field :accountname, id: 'user_edit', autofocus: true %>
+          </h2><br><br>
+          アイコン：<%= f.file_field :avatar, class: "sel_avatar" %>
+          <%= f.submit '編集', class: "edit_btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
