@@ -8,5 +8,8 @@ class ApplicationController < ActionController::Base
 
    def configure_permitted_parameters
      devise_parameter_sanitizer.for(:sign_up).push(:accountname, :color, :avatar)
+    #devise_parameter_sanitizer.for(:sign_up) << :avatar
+    ## To permit attributes while editing a registration 
+    #devise_parameter_sanitizer.for(:account_update) << :avatar	
    end
 end

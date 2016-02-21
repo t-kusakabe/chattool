@@ -32,3 +32,9 @@ function cng_col() {
   var sel_col = document.getElementById('sel_col').value;
   $(".user_image").css("border-color", sel_col);
 }
+// function reload() {
+//   window.location.reload();
+// }
+// document.addEventListener("DOMContentLoaded",function (eve) {
+//   setTimeout("reload();",60000);
+// });

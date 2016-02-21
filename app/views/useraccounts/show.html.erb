@@ -1,6 +1,6 @@
 <div id="mypage">
   <div id="opa_layer">
-    <h1 class="mypage_title">MyPage</h1><br>
+    <h1 class="mypage_title">MyPage</h1>
     <div id="user_info">
       <!-- アカウントのアイコン -->
       <%= image_tag current_useraccount.avatar, size: '100x100', class: 'user_image' %>
@@ -10,9 +10,8 @@
       <% end %>
       <div class='user_name'>
           ユーザの名前：<br>
-          <span id="account_user"><%= @account.accountname %></span>
+          <span id="user_name"><%= @account.accountname %></span>
       </div>
-      <br><br><br>
       <%= link_to '編集', edit_useraccount_path, class: 'to_edit_page' %>
     </div>
   </div>

@@ -9,6 +9,7 @@ html {
     position: fixed;
     top: 0;
   }
+
 }
 
 /* application.html.erb */
@@ -349,11 +350,12 @@ img.pic_shikamaro {
   top: 3%;
 }
 #user_info {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 .user_image {
   display: block;
+  float: left;
   height: 90px;
   width: 90px;
   float: left;
@@ -366,16 +368,24 @@ h1.mypage_title {
   font-size: 250%;
   color: #fff;
   text-shadow: 3px 4px #000;
+  height: 1em;
 }
 .user_name {
-  margin-left: 5%;
-  width: 70%;
-  float:left;
+  margin-left: 15%;
+  margin-top: 3%;
+  width: 90%;
+  height: 3em;
   font-size: 200%;
   font-weight: bolder;
   color: #888;
+  text-shadow: 2px 3px #fff;
+}
+#user_name {
+  color: #000;
+  font-size: 150%;
 }
 #account_user {
+  display: block;
   color: #000;
   font-size: 140%;
   margin-left: 5%;
@@ -385,12 +395,14 @@ h1.mypage_title {
   font-size: 150%;
   width: 70%;
   // height: 2em;
-  margin-left: 5%;
+  // margin-left: 5%;
   background-color: rgba(0,0,0,0);
   // border: 3px solid #44F;
   border: none;
   border-bottom: 3px solid #000;
-  // border-radius: 20px;
+  // border-radius: 20px
+  // float: right;
+  // clear: both;
 }
 .cng_col {
   font-size: 110%;
@@ -434,7 +446,7 @@ button.cng_col {
   height: 50%;
   #description {
     position: relative;
-    top: -2em;
+    top: -1.5em;
   }
   #new_group {
     // margin-left: 10%;
@@ -458,7 +470,7 @@ button.cng_col {
     #group_description {
       border: 3px solid #44f;
       border-radius: 10px;
-      width: 30%;
+      width: 50%;
       height: 4em;
       font-size: 120%;
       font-weight: bold;
@@ -487,17 +499,24 @@ button.cng_col {
   font-size: 50%;
   float: right;
   text-decoration: none;
+  &:hover {
+    background-color: #f88;
+  }
 }
 
 // edit.html.erb
 .to_edit_page {
   text-decoration: none;
   color: #009;
-  font-size: 150%;
+  font-size: 250%;
+  padding-top: 0;
+  height: 1em;
   clear:left;
+  float: right;
 }
 .to_edit_page:hover{
-  background-color: #ccc;
+  color: #00f;
+  background-color: rgba(0,0,0,0);
 }
 .edit_btn {
   border: none;
@@ -507,4 +526,15 @@ button.cng_col {
 }
 .sel_avatar {
   font-size: 70%;
+}
+#group_create {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
+  width: 40%;
+  color: #fff;
+  background-color: #44f;
+  border: none;
+  margin-top: 3%;
 }
