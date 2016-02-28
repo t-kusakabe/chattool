@@ -51,8 +51,9 @@ gem 'pry-rails'
 
 group :production, :staging do
   gem 'rails_12factor'
-  gem 'pg'
+#  gem 'pg'
 end
 
 gem 'paperclip'
 gem 'websocket-rails'
+gem 'unicorn'

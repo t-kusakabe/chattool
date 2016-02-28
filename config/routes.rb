@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+  resources :articles
   devise_for :useraccounts
   resources :useraccounts, only: [:show, :edit, :update]
   root 'chats#index'

@@ -1,8 +1,10 @@
 <div class='create_group_form'>
   <%= form_for @group do |f| %>
-    <h1>Group Name</h1>
+    <h1>Group Name：</h1>
     <%= f.text_field :group_name, autofocus: true %><br>
-    <h1>Topic</h1>
+    <h1 id="description">説明：</h1>
     <%= f.text_area :description %>
+    
+    <input type="submit" name="name" id="group_create" value="新規作成">
   <% end %>
 </div>
